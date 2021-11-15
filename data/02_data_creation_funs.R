@@ -1,7 +1,7 @@
 #########################################################################
 # Description:    Functions for analyzing ethnic origins of inventors   #
 # Authors:        Matthias Niggli/CIEB UniBasel                         #
-# Date:           16.02.2021 (revised 11.11.2021)                       #
+# Date:           15.11.2021 (revised 11.11.2021)                       #
 #########################################################################
 
 #### ETHNIC ORIGIN COMPOSITION: -------------------------------------------
@@ -47,37 +47,22 @@ foreign_shares_fun <- function(COUNTRIES, ORIGIN, START_YEAR, END_YEAR){
 }
 
 #### ORIGIN SHARES BY COUNTRY AND TECHFIELDS: -------------------------------------------
-# calculates the ethnic origin composition within techfields and countries.
-# function requires a vector of countires and specification if techfields should be
-# grouped to major techfields.
 
-inv_comp_techfield <- function(df, country, grouping = FALSE){
+# (1) calculates the ethnic origin composition within technological groups and countries.
+# function requires a data.frame of inventor data and a vector of countries to consider
+inv_comp_tech <- function(df, country){
         
-        if(grouping == FALSE){
-                annual_total <- filter(df, Ctry_code == country) %>%
-                        group_by(tech_field, p_year) %>% summarise(total = n())
-                
-                tmp <- filter(df, Ctry_code == country) %>%
-                        group_by(tech_field, p_year) %>% select(contains("prob")) %>%
-                        summarise_all(.funs = sum)
-                
-                tmp <- merge(tmp, annual_total, by = c("tech_field", "p_year"))
-                tmp[, grepl("prob", names(tmp))] <- tmp[, grepl("prob", names(tmp))] / tmp$total
-                
-                tmp <- gather(tmp, key = "origin", value = "share", -p_year, -total, -tech_field)
-        }else{
-                annual_total <- filter(df, Ctry_code == country) %>%
+        annual_total <- filter(df, Ctry_code == country) %>%
                         group_by(tech_group_name, p_year) %>% summarise(total = n())
-                
-                tmp <- filter(df, Ctry_code == country) %>%
+        
+        tmp <- filter(df, Ctry_code == country) %>%
                         group_by(tech_group_name, p_year) %>% select(contains("prob")) %>%
                         summarise_all(.funs = sum)
-                
-                tmp <- merge(tmp, annual_total, by = c("tech_group_name", "p_year"))
-                tmp[, grepl("prob", names(tmp))] <- tmp[, grepl("prob", names(tmp))] / tmp$total
-                
-                tmp <- gather(tmp, key = "origin", value = "share", -p_year, -total, -tech_group_name)  
-        }
+        tmp <- merge(tmp, annual_total, by = c("tech_group_name", "p_year"))
+        tmp[, grepl("prob", names(tmp))] <- tmp[, grepl("prob", names(tmp))] / tmp$total
+        
+        tmp <- gather(tmp, key = "origin", 
+                      value = "share", -p_year, -total, -tech_group_name)
         
         tmp$origin <- gsub("prob_", "", tmp$origin)
         tmp$country <- country
@@ -85,36 +70,50 @@ inv_comp_techfield <- function(df, country, grouping = FALSE){
         return(tmp)
 }
 
-# calculates the (moving average of) the cumulative share of a selection of ethnic background for a specification of
-# selected techfields and countries.
-
-non_western_techfield <- function(countries, origins, techfields, start_year, 
-                                  end_year, min_inventors = 30, MA_5 = FALSE){
+# (2) calculates the aggreagte share of a selection of ethnic background per 
+# technological group and country.
+non_western_tech <- function(dat,
+                             countries, origins, 
+                             start_year, end_year,
+                             MA5 = FALSE,
+                             min_inventors = 30, min_years = 10){
         
-        inv_origin_shares <- lapply(countries, function(x) inv_comp_techfield(inv_dat, x, grouping = FALSE))
+        # get country composition by tech_group
+        inv_origin_shares <- lapply(countries, function(x) inv_comp_tech(df = dat, x))
         names(inv_origin_shares) <- countries
         
+        # calculate aggreagte share of selected origins per techgroup and country
         country_diff <- data.frame()
-        
         for(i in 1:length(inv_origin_shares)){
-                tmp <- filter(inv_origin_shares[[i]], 
-                              origin %in% origins & total >= min_inventors &
-                                      tech_field %in% techfields)
-                tmp <- tmp %>% group_by(p_year, tech_field) %>% summarize(share = sum(share)) %>%
-                        filter(p_year <= end_year & p_year >= start_year) %>%
-                        mutate(country = names(inv_origin_shares)[i])
-                country_diff <- rbind(country_diff, tmp)
+                        tmp <- filter(inv_origin_shares[[i]], 
+                                      origin %in% origins & total >= min_inventors)
+                        tmp <- tmp %>% group_by(p_year, tech_group_name) %>% 
+                                summarize(share = sum(share)) %>%
+                                filter(p_year <= end_year & p_year >= start_year) %>%
+                                mutate(country = names(inv_origin_shares)[i])
+                        country_diff <- rbind(country_diff, tmp)
         }
         
-        # calculate 5year rolling average:
-        if(MA_5 == TRUE){
+        # subset to country-techgroup pairs with at least "min_years" of observations
+        country_diff <- country_diff %>% 
+                mutate(country_tech = paste0(country, tech_group_name)) 
+        tmp <- country_diff %>%
+                group_by(country_tech) %>% summarize(count = n()) %>%
+                filter(count > min_years)
+        tmp <- tmp$country_tech
+        country_diff <- country_diff %>% filter(country_tech %in% tmp) %>%
+                select(-country_tech)
+        
+        # if specified: calculate 5year moving average:
+        if(MA5 == TRUE){
                 ma <- function(x, n = 5){stats::filter(x, rep(1 / n, n), sides = 1)}
                 country_diff <- country_diff %>%
-                        group_by(country, tech_field) %>%
+                        group_by(country, tech_group_name) %>%
                         arrange(p_year) %>%
                         mutate(five_y_ma_share = ma(share)) %>%
                         filter(p_year > (start_year + 4))}
-        
-        return(country_diff)}
+
+        return(country_diff)
+        }
 
 

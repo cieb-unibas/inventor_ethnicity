@@ -22,6 +22,8 @@ inv_comp_ctry <- function(df, country){
         tmp <- gather(tmp, key = "origin", value = "share", -p_year, -total)
         tmp$origin <- gsub("prob_", "", tmp$origin)
         tmp$country <- country
+        tmp$total <- NULL
+        tmp <- tmp[, c("p_year", "country", "origin", "share")]
         
         return(tmp)
 }
@@ -41,8 +43,9 @@ foreign_shares_fun <- function(COUNTRIES, ORIGIN, START_YEAR, END_YEAR){
         inv_origin_shares <- bind_rows(inv_origin_shares)
         
         plot_data <- filter(inv_origin_shares, origin %in% ORIGIN & 
-                                    p_year <= END_YEAR & p_year >= START_YEAR)
-        
+                                    p_year <= END_YEAR & p_year >= START_YEAR) %>%
+                arrange(p_year)
+                
         return(plot_data)
 }
 
@@ -111,8 +114,15 @@ non_western_tech <- function(dat,
                         group_by(country, tech_group_name) %>%
                         arrange(p_year) %>%
                         mutate(five_y_ma_share = ma(share)) %>%
-                        filter(p_year > (start_year + 4))}
-
+                        filter(p_year > (start_year + 4))
+                country_diff$share <- NULL
+                country_diff <- rename(country_diff, share = five_y_ma_share)}
+        
+        # arrange and clean data.frame
+        country_diff <- country_diff %>% arrange(p_year)
+        country_diff <- country_diff[, c("p_year", "country", "tech_group_name", "share")] %>%
+                rename(tech_group = tech_group_name)
+        
         return(country_diff)
         }
 

@@ -99,9 +99,9 @@ if(length(unique(plot3_df$country)) == length(COUNTRIES)){
     warning("Number of countries in the created data does not correspond to function input.")}
 
 #### visualize the data
-# ggplot(plot3_df, aes(x = p_year, y = five_y_ma_share, color = country))+
+# ggplot(plot3_df, aes(x = p_year, y = share, color = country))+
 #   geom_line()+
-#   facet_wrap(.~ tech_group_name) +
+#   facet_wrap(.~ tech_group) +
 #   labs(x = "Year", y = "Aggregate Share of Non-Western Ethnic Origins") +
 #   scale_y_continuous(labels = scales::percent, limits = c(0, 0.4)) +
 #   theme(panel.background = element_blank(),

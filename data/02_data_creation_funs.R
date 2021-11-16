@@ -1,7 +1,7 @@
 #########################################################################
 # Description:    Functions for analyzing ethnic origins of inventors   #
 # Authors:        Matthias Niggli/CIEB UniBasel                         #
-# Date:           15.11.2021 (revised 11.11.2021)                       #
+# Date:           15.11.2021                                            #
 #########################################################################
 
 #### ETHNIC ORIGIN COMPOSITION: -------------------------------------------

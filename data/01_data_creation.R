@@ -3,7 +3,7 @@
 #                 the EPO to investigate the ethnicity of inventors   #
 #                 across countries and over time.                     #
 # Authors:        Matthias Niggli/CIEB University of Basel            #
-# Last Revised:   15.11.2021                                          #
+# Last Revised:   16.11.2021                                          #
 #######################################################################
 
 ##################################################
@@ -49,7 +49,11 @@ source("data/02_data_creation_funs.R")
 #############################################################################
 
 #### specify parameters
-COUNTRIES <- c("US", "CA", "GB", "FR", "DE", "IT", "ES", "CH", "NL", "SE", "DK", "AT", "BE")
+COUNTRIES <- c("US", "CA", 
+               "CH",
+               "GB", "FR", "DE", "IT", 
+               "ES", "NL", "SE", "DK", "AT"#, "BE"
+               )
 NON_WESTERN_ORIGIN <- c("China", "India", "Slavic-Russian",
                         "Arabic", "Persian", "Turkey", "SouthEastAsia")
 
@@ -64,26 +68,29 @@ if(length(unique(plot2_df$country)) == length(COUNTRIES)){
     warning("Number of countries in the created data does not correspond to function input.")}
 
 #### visualize the data
-# ggplot(plot2_df, aes(x = p_year, y = share, color = origin))+
-#   facet_wrap(.~ country)+ 
-#   geom_line()+
-#   labs(x = "Year", y = "Shares of Non-Western Ethnic Origins", color = "", shape = "")+
-#   scale_y_continuous(labels = scales::percent, limits = c(0, 0.125))+
-#   theme(panel.background = element_blank(),
-#         panel.grid.major.y = element_line(linetype = "dotted", color = "grey"),
-#         legend.position = "bottom",
-#         axis.line = element_line(),
-#         axis.title = element_text(face="bold",size=10))
+ggplot(plot2_df, aes(x = p_year, y = share, color = origin))+
+  facet_wrap(.~ country)+
+  geom_line()+
+  labs(x = "Year", y = "Shares of Non-Western Ethnic Origins", color = "", shape = "")+
+  scale_y_continuous(labels = scales::percent, limits = c(0, 0.125))+
+  theme(panel.background = element_blank(),
+        panel.grid.major.y = element_line(linetype = "dotted", color = "grey"),
+        legend.position = "bottom",
+        axis.line = element_line(),
+        axis.title = element_text(face="bold",size=10))
+ggsave("report/plot2.png")
+plot2_df <- NULL
 
 #####################################################################################################
 ######## Figure 3: Non-Western Origin Shares in Technological Fields of Western countries ###########
 #####################################################################################################
 
 #### specify parameters
-COUNTRIES <- c("US", #"CA",
+COUNTRIES <- c("US", "CA",
                "CH", 
                "GB", "FR", "DE", "IT", 
-               "ES", "NL", "SE", "DK", "BE", "AT")
+               "ES", "NL", "SE", "DK", "AT"#, "BE"
+               )
 NON_WESTERN_ORIGIN <- c("China", "India", "Slavic-Russian",
                         "Arabic", "Persian", "Turkey", "SouthEastAsia")
 
@@ -114,12 +121,13 @@ if(length(unique(plot3_df$country)) == length(COUNTRIES)){
 ######## Save the datasets #######
 ##################################
 
-for (i in seq(2,3)){
-  dat_name <- paste0("plot", i, "_df")
-  write.csv(get(dat_name), 
-            paste0("report/", dat_name, ".csv"),
-            row.names = FALSE)
-  print(paste("Data for plot", i, "saved."))
-}
+# for (i in seq(2,3)){
+#   dat_name <- paste0("plot", i, "_df")
+#   write.csv(get(dat_name), 
+#             paste0("report/", dat_name, ".csv"),
+#             row.names = FALSE)
+#   print(paste("Data for plot", i, "saved."))
+# }
+write.csv(x = plot3_df, file = "report/plot3_df.csv", row.names = FALSE)
 print("Data creation completed.")
 

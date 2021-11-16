@@ -12,6 +12,14 @@
 1985,"US","Pharmaceuticals & Biotechnology",0.1077651405727
 1985,"US","Semiconductors",0.169916320071378
 1985,"US","Transport",0.0449196671596243
+1985,"CA","Chemistry & Materials",0.106768840083589
+1985,"CA","Consumer Goods & Civil Engineering",0.0571124998415982
+1985,"CA","Electrical Machinery",0.0942292447069304
+1985,"CA","Engines, Turbines, Thermal & Environmental Technologies",NA
+1985,"CA","Information & Communication Technology",NA
+1985,"CA","Instruments",0.0998841233916103
+1985,"CA","Machines & Mechanical Engineering",0.0660688853303915
+1985,"CA","Pharmaceuticals & Biotechnology",NA
 1985,"CH","Chemistry & Materials",0.0359639246213699
 1985,"CH","Consumer Goods & Civil Engineering",0.0329788961910173
 1985,"CH","Electrical Machinery",0.0475115135241533
@@ -91,11 +99,6 @@
 1985,"SE","Transport",NA
 1985,"DK","Machines & Mechanical Engineering",0.016229998918026
 1985,"DK","Pharmaceuticals & Biotechnology",NA
-1985,"BE","Chemistry & Materials",0.0294847277045545
-1985,"BE","Consumer Goods & Civil Engineering",NA
-1985,"BE","Instruments",0.0139050110723134
-1985,"BE","Machines & Mechanical Engineering",0.0243899734618845
-1985,"BE","Pharmaceuticals & Biotechnology",0.031501331573601
 1985,"AT","Chemistry & Materials",0.0185561768301009
 1985,"AT","Consumer Goods & Civil Engineering",NA
 1985,"AT","Electrical Machinery",NA
@@ -115,6 +118,13 @@
 1986,"US","Pharmaceuticals & Biotechnology",0.115263156091991
 1986,"US","Semiconductors",0.17161615079233
 1986,"US","Transport",0.0432489631896613
+1986,"CA","Chemistry & Materials",0.0993898609591585
+1986,"CA","Consumer Goods & Civil Engineering",0.0712002966148818
+1986,"CA","Electrical Machinery",0.10675403846102
+1986,"CA","Information & Communication Technology",NA
+1986,"CA","Instruments",0.109099953292106
+1986,"CA","Machines & Mechanical Engineering",0.0625519837233253
+1986,"CA","Pharmaceuticals & Biotechnology",NA
 1986,"CH","Chemistry & Materials",0.0334162077805186
 1986,"CH","Consumer Goods & Civil Engineering",0.0340188846163547
 1986,"CH","Electrical & Audiovisual Technologies",NA
@@ -194,11 +204,6 @@
 1986,"SE","Pharmaceuticals & Biotechnology",0.0216815292180399
 1986,"SE","Transport",0.00920598769236951
 1986,"DK","Machines & Mechanical Engineering",0.0170022179610282
-1986,"BE","Chemistry & Materials",0.0302390711673807
-1986,"BE","Consumer Goods & Civil Engineering",0.0203596014047224
-1986,"BE","Instruments",0.0132755157667339
-1986,"BE","Machines & Mechanical Engineering",0.0295593852902931
-1986,"BE","Pharmaceuticals & Biotechnology",0.0332633796055223
 1986,"AT","Chemistry & Materials",0.0209477838504958
 1986,"AT","Consumer Goods & Civil Engineering",0.0364668623766438
 1986,"AT","Engines, Turbines, Thermal & Environmental Technologies",NA
@@ -216,6 +221,14 @@
 1987,"US","Pharmaceuticals & Biotechnology",0.115437530643531
 1987,"US","Semiconductors",0.178595279959323
 1987,"US","Transport",0.0455442191664434
+1987,"CA","Chemistry & Materials",0.117093196952451
+1987,"CA","Consumer Goods & Civil Engineering",0.0633365283326448
+1987,"CA","Electrical Machinery",0.0864527605710799
+1987,"CA","Information & Communication Technology",NA
+1987,"CA","Instruments",0.101544286469851
+1987,"CA","Machines & Mechanical Engineering",0.0681440817023785
+1987,"CA","Medical Technology",NA
+1987,"CA","Pharmaceuticals & Biotechnology",NA
 1987,"CH","Chemistry & Materials",0.0284557501953685
 1987,"CH","Consumer Goods & Civil Engineering",0.0340932104323585
 1987,"CH","Electrical Machinery",0.0410999349547544
@@ -301,10 +314,6 @@
 1987,"DK","Chemistry & Materials",NA
 1987,"DK","Machines & Mechanical Engineering",0.0151209011176276
 1987,"DK","Pharmaceuticals & Biotechnology",NA
-1987,"BE","Chemistry & Materials",0.0347073865864525
-1987,"BE","Instruments",0.0134215017894541
-1987,"BE","Machines & Mechanical Engineering",0.0246331321909805
-1987,"BE","Pharmaceuticals & Biotechnology",0.0314859760954155
 1987,"AT","Chemistry & Materials",0.0207878827166236
 1987,"AT","Consumer Goods & Civil Engineering",0.0276714436291586
 1987,"AT","Electrical Machinery",NA
@@ -324,6 +333,14 @@
 1988,"US","Pharmaceuticals & Biotechnology",0.117503491639325
 1988,"US","Semiconductors",0.174762777488957
 1988,"US","Transport",0.0541014437088259
+1988,"CA","Chemistry & Materials",0.10938621578673
+1988,"CA","Consumer Goods & Civil Engineering",0.063241550544284
+1988,"CA","Electrical Machinery",0.0834395120766854
+1988,"CA","Engines, Turbines, Thermal & Environmental Technologies",NA
+1988,"CA","Information & Communication Technology",0.14631039156909
+1988,"CA","Instruments",0.102039746005423
+1988,"CA","Machines & Mechanical Engineering",0.0620623924025139
+1988,"CA","Pharmaceuticals & Biotechnology",NA
 1988,"CH","Chemistry & Materials",0.0343064365872603
 1988,"CH","Consumer Goods & Civil Engineering",0.0307564876876048
 1988,"CH","Electrical Machinery",0.0262665019000031
@@ -408,12 +425,6 @@
 1988,"SE","Transport",0.00975103466050992
 1988,"DK","Machines & Mechanical Engineering",0.0123542622448548
 1988,"DK","Pharmaceuticals & Biotechnology",NA
-1988,"BE","Chemistry & Materials",0.0381697618065452
-1988,"BE","Consumer Goods & Civil Engineering",0.0199250547514189
-1988,"BE","Electrical Machinery",NA
-1988,"BE","Instruments",0.0142165389841507
-1988,"BE","Machines & Mechanical Engineering",0.0212617272294294
-1988,"BE","Pharmaceuticals & Biotechnology",0.0427327401026376
 1988,"AT","Chemistry & Materials",0.0242929992504761
 1988,"AT","Consumer Goods & Civil Engineering",0.0279744077131134
 1988,"AT","Engines, Turbines, Thermal & Environmental Technologies",0.0181908086233825
@@ -431,6 +442,15 @@
 1989,"US","Pharmaceuticals & Biotechnology",0.1224773186336
 1989,"US","Semiconductors",0.185635242903334
 1989,"US","Transport",0.0548739462664407
+1989,"CA","Chemistry & Materials",0.119266538152106
+1989,"CA","Consumer Goods & Civil Engineering",0.0646290081353225
+1989,"CA","Electrical Machinery",0.0851077760468024
+1989,"CA","Engines, Turbines, Thermal & Environmental Technologies",0.0540341704738068
+1989,"CA","Information & Communication Technology",0.170224807673887
+1989,"CA","Instruments",0.104427893689828
+1989,"CA","Machines & Mechanical Engineering",0.0658511713375199
+1989,"CA","Medical Technology",NA
+1989,"CA","Pharmaceuticals & Biotechnology",0.218113734342966
 1989,"CH","Chemistry & Materials",0.0270909894369514
 1989,"CH","Consumer Goods & Civil Engineering",0.0303738709401709
 1989,"CH","Electrical Machinery",0.0313481690782874
@@ -515,10 +535,6 @@
 1989,"DK","Chemistry & Materials",NA
 1989,"DK","Machines & Mechanical Engineering",0.00375596364788005
 1989,"DK","Pharmaceuticals & Biotechnology",NA
-1989,"BE","Chemistry & Materials",0.0381294727473
-1989,"BE","Instruments",0.0139513949120553
-1989,"BE","Machines & Mechanical Engineering",0.022561668348472
-1989,"BE","Pharmaceuticals & Biotechnology",0.0410809966354415
 1989,"AT","Chemistry & Materials",0.0243907230507197
 1989,"AT","Consumer Goods & Civil Engineering",0.0219727071395192
 1989,"AT","Electrical Machinery",NA
@@ -537,6 +553,14 @@
 1990,"US","Pharmaceuticals & Biotechnology",0.123218257051752
 1990,"US","Semiconductors",0.179070357461642
 1990,"US","Transport",0.0619603636872339
+1990,"CA","Chemistry & Materials",0.143509987906739
+1990,"CA","Consumer Goods & Civil Engineering",0.0588145925047798
+1990,"CA","Electrical & Audiovisual Technologies",NA
+1990,"CA","Electrical Machinery",0.0820104995609679
+1990,"CA","Information & Communication Technology",0.168721133825245
+1990,"CA","Instruments",0.109153453986661
+1990,"CA","Machines & Mechanical Engineering",0.0704550822277907
+1990,"CA","Pharmaceuticals & Biotechnology",0.225393079850605
 1990,"CH","Chemistry & Materials",0.023658461995697
 1990,"CH","Consumer Goods & Civil Engineering",0.0228764962761865
 1990,"CH","Electrical & Audiovisual Technologies",NA
@@ -625,13 +649,6 @@
 1990,"DK","Information & Communication Technology",NA
 1990,"DK","Machines & Mechanical Engineering",0.00816290791389325
 1990,"DK","Pharmaceuticals & Biotechnology",0.0149059757227626
-1990,"BE","Chemistry & Materials",0.0387836595769218
-1990,"BE","Electrical & Audiovisual Technologies",NA
-1990,"BE","Electrical Machinery",NA
-1990,"BE","Information & Communication Technology",NA
-1990,"BE","Instruments",0.0177357473654532
-1990,"BE","Machines & Mechanical Engineering",0.0209827932136078
-1990,"BE","Pharmaceuticals & Biotechnology",0.0577293125190512
 1990,"AT","Chemistry & Materials",0.0214695140546193
 1990,"AT","Consumer Goods & Civil Engineering",0.024893149999656
 1990,"AT","Electrical & Audiovisual Technologies",NA
@@ -651,6 +668,14 @@
 1991,"US","Pharmaceuticals & Biotechnology",0.129871036987897
 1991,"US","Semiconductors",0.188957093606639
 1991,"US","Transport",0.0641372004726473
+1991,"CA","Chemistry & Materials",0.153137643735508
+1991,"CA","Consumer Goods & Civil Engineering",0.0628288575610725
+1991,"CA","Electrical & Audiovisual Technologies",NA
+1991,"CA","Electrical Machinery",0.0866373452472569
+1991,"CA","Information & Communication Technology",0.156768452919738
+1991,"CA","Instruments",0.0997934470214863
+1991,"CA","Machines & Mechanical Engineering",0.0672362933084318
+1991,"CA","Pharmaceuticals & Biotechnology",0.207679661010727
 1991,"CH","Chemistry & Materials",0.0267408458871029
 1991,"CH","Consumer Goods & Civil Engineering",0.0223203504471997
 1991,"CH","Electrical & Audiovisual Technologies",NA
@@ -736,13 +761,6 @@
 1991,"DK","Chemistry & Materials",0.0244979429571341
 1991,"DK","Electrical & Audiovisual Technologies",NA
 1991,"DK","Electrical Machinery",NA
-1991,"BE","Chemistry & Materials",0.0448097037577455
-1991,"BE","Electrical & Audiovisual Technologies",NA
-1991,"BE","Electrical Machinery",NA
-1991,"BE","Information & Communication Technology",NA
-1991,"BE","Instruments",0.023725623603436
-1991,"BE","Machines & Mechanical Engineering",0.0183388602335003
-1991,"BE","Pharmaceuticals & Biotechnology",0.0571579882372414
 1991,"AT","Electrical & Audiovisual Technologies",NA
 1991,"AT","Electrical Machinery",0.0176838058373256
 1991,"AT","Information & Communication Technology",NA
@@ -760,6 +778,14 @@
 1992,"US","Pharmaceuticals & Biotechnology",0.137107736792725
 1992,"US","Semiconductors",0.188479599081336
 1992,"US","Transport",0.0640518864883967
+1992,"CA","Chemistry & Materials",0.145882482454
+1992,"CA","Consumer Goods & Civil Engineering",0.0597891481752269
+1992,"CA","Electrical & Audiovisual Technologies",NA
+1992,"CA","Electrical Machinery",0.117980105313161
+1992,"CA","Information & Communication Technology",0.137522352971846
+1992,"CA","Instruments",0.113271249983932
+1992,"CA","Machines & Mechanical Engineering",0.0688278616730592
+1992,"CA","Pharmaceuticals & Biotechnology",0.217086605033465
 1992,"CH","Chemistry & Materials",0.0379555539895306
 1992,"CH","Consumer Goods & Civil Engineering",0.0206577686775702
 1992,"CH","Electrical & Audiovisual Technologies",NA
@@ -847,13 +873,6 @@
 1992,"DK","Electrical Machinery",NA
 1992,"DK","Information & Communication Technology",NA
 1992,"DK","Pharmaceuticals & Biotechnology",0.0199449361727841
-1992,"BE","Chemistry & Materials",0.0367712812637322
-1992,"BE","Electrical & Audiovisual Technologies",NA
-1992,"BE","Electrical Machinery",NA
-1992,"BE","Information & Communication Technology",NA
-1992,"BE","Instruments",0.0299182652016624
-1992,"BE","Machines & Mechanical Engineering",0.017220758913954
-1992,"BE","Pharmaceuticals & Biotechnology",0.059999650196542
 1992,"AT","Chemistry & Materials",0.0138750043293861
 1992,"AT","Electrical & Audiovisual Technologies",NA
 1992,"AT","Electrical Machinery",0.0250506439357673
@@ -873,6 +892,15 @@
 1993,"US","Pharmaceuticals & Biotechnology",0.142296963882694
 1993,"US","Semiconductors",0.196970087038971
 1993,"US","Transport",0.0672697423696376
+1993,"CA","Chemistry & Materials",0.160401270682222
+1993,"CA","Computer Technology",NA
+1993,"CA","Consumer Goods & Civil Engineering",0.0656167238889707
+1993,"CA","Electrical & Audiovisual Technologies",NA
+1993,"CA","Electrical Machinery",0.130809133808109
+1993,"CA","Information & Communication Technology",0.0998153377872099
+1993,"CA","Instruments",0.124114809164434
+1993,"CA","Machines & Mechanical Engineering",0.0620617382197297
+1993,"CA","Pharmaceuticals & Biotechnology",0.212524304305725
 1993,"CH","Chemistry & Materials",0.0390555070206955
 1993,"CH","Consumer Goods & Civil Engineering",0.0261306688360598
 1993,"CH","Electrical & Audiovisual Technologies",0.0261752014345008
@@ -962,13 +990,6 @@
 1993,"DK","Information & Communication Technology",NA
 1993,"DK","Machines & Mechanical Engineering",0.0164200304978287
 1993,"DK","Pharmaceuticals & Biotechnology",0.0257001945467314
-1993,"BE","Chemistry & Materials",0.0366621881625753
-1993,"BE","Electrical & Audiovisual Technologies",NA
-1993,"BE","Electrical Machinery",0.0457712790218775
-1993,"BE","Information & Communication Technology",NA
-1993,"BE","Instruments",0.0358428166888082
-1993,"BE","Machines & Mechanical Engineering",0.0240301502137776
-1993,"BE","Pharmaceuticals & Biotechnology",0.0591268062387763
 1993,"AT","Electrical & Audiovisual Technologies",NA
 1993,"AT","Electrical Machinery",0.0283161071595562
 1993,"AT","Information & Communication Technology",NA
@@ -986,6 +1007,15 @@
 1994,"US","Pharmaceuticals & Biotechnology",0.155277739191715
 1994,"US","Semiconductors",0.204995733463359
 1994,"US","Transport",0.0703910005280047
+1994,"CA","Chemistry & Materials",0.156991567849788
+1994,"CA","Computer Technology",NA
+1994,"CA","Consumer Goods & Civil Engineering",0.0680869269387359
+1994,"CA","Electrical & Audiovisual Technologies",0.0890105945239571
+1994,"CA","Electrical Machinery",0.139392063165852
+1994,"CA","Information & Communication Technology",0.072312763897937
+1994,"CA","Instruments",0.119059131345024
+1994,"CA","Machines & Mechanical Engineering",0.0630103599756908
+1994,"CA","Pharmaceuticals & Biotechnology",0.197932478315105
 1994,"CH","Chemistry & Materials",0.0374429967549153
 1994,"CH","Consumer Goods & Civil Engineering",0.0212737990956035
 1994,"CH","Electrical & Audiovisual Technologies",0.0243565608346757
@@ -1075,13 +1105,6 @@
 1994,"DK","Electrical Machinery",0.0115546143479042
 1994,"DK","Information & Communication Technology",NA
 1994,"DK","Pharmaceuticals & Biotechnology",0.0280605791789166
-1994,"BE","Chemistry & Materials",0.0450996094125332
-1994,"BE","Electrical & Audiovisual Technologies",0.0305811805932892
-1994,"BE","Electrical Machinery",0.0511303700713613
-1994,"BE","Information & Communication Technology",0.0347438202939736
-1994,"BE","Instruments",0.0384203591003847
-1994,"BE","Machines & Mechanical Engineering",0.0290889522384858
-1994,"BE","Pharmaceuticals & Biotechnology",0.0731853538453853
 1994,"AT","Electrical & Audiovisual Technologies",0.0172248586049876
 1994,"AT","Electrical Machinery",0.0248332273374747
 1994,"AT","Information & Communication Technology",0.0188875903606217
@@ -1099,6 +1122,15 @@
 1995,"US","Pharmaceuticals & Biotechnology",0.168729726374321
 1995,"US","Semiconductors",0.214870112898655
 1995,"US","Transport",0.069123180716401
+1995,"CA","Chemistry & Materials",0.165382315574989
+1995,"CA","Computer Technology",NA
+1995,"CA","Consumer Goods & Civil Engineering",0.0667355468589707
+1995,"CA","Electrical & Audiovisual Technologies",0.0924898301840067
+1995,"CA","Electrical Machinery",0.143635811377797
+1995,"CA","Information & Communication Technology",0.0787681735912953
+1995,"CA","Instruments",0.112554153904895
+1995,"CA","Machines & Mechanical Engineering",0.0681675952491896
+1995,"CA","Pharmaceuticals & Biotechnology",0.209053818512495
 1995,"CH","Chemistry & Materials",0.0479240141551003
 1995,"CH","Consumer Goods & Civil Engineering",0.0243191036882809
 1995,"CH","Electrical & Audiovisual Technologies",0.0282260649771148
@@ -1190,13 +1222,6 @@
 1995,"DK","Information & Communication Technology",0.0205079764480844
 1995,"DK","Machines & Mechanical Engineering",0.0165281885454048
 1995,"DK","Pharmaceuticals & Biotechnology",0.0326050659929788
-1995,"BE","Chemistry & Materials",0.05079640962707
-1995,"BE","Electrical & Audiovisual Technologies",0.0330082493466777
-1995,"BE","Electrical Machinery",0.0451803280196518
-1995,"BE","Information & Communication Technology",0.0410083119920735
-1995,"BE","Instruments",0.0392940192334789
-1995,"BE","Machines & Mechanical Engineering",0.0312868817931632
-1995,"BE","Pharmaceuticals & Biotechnology",0.0574477291346519
 1995,"AT","Chemistry & Materials",0.0142278240166575
 1995,"AT","Consumer Goods & Civil Engineering",0.0256830663938535
 1995,"AT","Electrical & Audiovisual Technologies",0.0173579292069268
@@ -1216,6 +1241,16 @@
 1996,"US","Pharmaceuticals & Biotechnology",0.175243674783
 1996,"US","Semiconductors",0.216279850612127
 1996,"US","Transport",0.0735383323603678
+1996,"CA","Chemistry & Materials",0.160615153917467
+1996,"CA","Computer Technology",NA
+1996,"CA","Consumer Goods & Civil Engineering",0.0554884772767598
+1996,"CA","Electrical & Audiovisual Technologies",0.0914980742424679
+1996,"CA","Electrical Machinery",0.147982595748939
+1996,"CA","Information & Communication Technology",0.0925572069356388
+1996,"CA","Instruments",0.128796660107167
+1996,"CA","Machines & Mechanical Engineering",0.0687865178169834
+1996,"CA","Medical Technology",NA
+1996,"CA","Pharmaceuticals & Biotechnology",0.197037829121263
 1996,"CH","Chemistry & Materials",0.0490548245319261
 1996,"CH","Consumer Goods & Civil Engineering",0.0266531279759086
 1996,"CH","Electrical & Audiovisual Technologies",0.0298675997105538
@@ -1305,14 +1340,6 @@
 1996,"DK","Information & Communication Technology",0.0194272017558819
 1996,"DK","Machines & Mechanical Engineering",0.0202967626857452
 1996,"DK","Pharmaceuticals & Biotechnology",0.0258896723414462
-1996,"BE","Chemistry & Materials",0.043213843454872
-1996,"BE","Consumer Goods & Civil Engineering",0.0298434399908231
-1996,"BE","Electrical & Audiovisual Technologies",0.0342584191449698
-1996,"BE","Electrical Machinery",0.0427494699968552
-1996,"BE","Information & Communication Technology",0.0400366856814199
-1996,"BE","Instruments",0.0312160320077044
-1996,"BE","Machines & Mechanical Engineering",0.0333642602560074
-1996,"BE","Pharmaceuticals & Biotechnology",0.0575656179528544
 1996,"AT","Chemistry & Materials",0.0103762858313217
 1996,"AT","Consumer Goods & Civil Engineering",0.021758176143746
 1996,"AT","Electrical & Audiovisual Technologies",0.0179294506143053
@@ -1332,6 +1359,17 @@
 1997,"US","Pharmaceuticals & Biotechnology",0.184492036023638
 1997,"US","Semiconductors",0.232557930747823
 1997,"US","Transport",0.0809183706534997
+1997,"CA","Chemistry & Materials",0.169356657637203
+1997,"CA","Computer Technology",0.139715890050791
+1997,"CA","Consumer Goods & Civil Engineering",0.0768376513222731
+1997,"CA","Electrical & Audiovisual Technologies",0.0960923725201944
+1997,"CA","Electrical Machinery",0.146746535318429
+1997,"CA","Engines, Turbines, Thermal & Environmental Technologies",0.0840546120995182
+1997,"CA","Information & Communication Technology",0.100539159913905
+1997,"CA","Instruments",0.125717661919779
+1997,"CA","Machines & Mechanical Engineering",0.0687636647390899
+1997,"CA","Medical Technology",NA
+1997,"CA","Pharmaceuticals & Biotechnology",0.207196523044899
 1997,"CH","Chemistry & Materials",0.0441376430940219
 1997,"CH","Consumer Goods & Civil Engineering",0.0270173303877356
 1997,"CH","Electrical & Audiovisual Technologies",0.0301494472088896
@@ -1425,14 +1463,6 @@
 1997,"DK","Information & Communication Technology",0.013427575245073
 1997,"DK","Machines & Mechanical Engineering",0.0263647660089503
 1997,"DK","Pharmaceuticals & Biotechnology",0.0222158479964658
-1997,"BE","Chemistry & Materials",0.0555593014388823
-1997,"BE","Computer Technology",NA
-1997,"BE","Electrical & Audiovisual Technologies",0.0418933779139896
-1997,"BE","Electrical Machinery",0.0371664254047676
-1997,"BE","Information & Communication Technology",0.03940835487209
-1997,"BE","Instruments",0.032837213376877
-1997,"BE","Machines & Mechanical Engineering",0.0391671371428144
-1997,"BE","Pharmaceuticals & Biotechnology",0.0578019848777861
 1997,"AT","Chemistry & Materials",0.0232976866567286
 1997,"AT","Consumer Goods & Civil Engineering",0.0159446423961051
 1997,"AT","Electrical & Audiovisual Technologies",0.0202968901740635
@@ -1453,6 +1483,17 @@
 1998,"US","Pharmaceuticals & Biotechnology",0.198789909860091
 1998,"US","Semiconductors",0.244590346464245
 1998,"US","Transport",0.0877765721480408
+1998,"CA","Chemistry & Materials",0.151266488896902
+1998,"CA","Computer Technology",0.145871208467207
+1998,"CA","Consumer Goods & Civil Engineering",0.0672508736076192
+1998,"CA","Electrical & Audiovisual Technologies",0.0998725059967458
+1998,"CA","Electrical Machinery",0.157768431221413
+1998,"CA","Engines, Turbines, Thermal & Environmental Technologies",0.108615187412034
+1998,"CA","Information & Communication Technology",0.115099616283351
+1998,"CA","Instruments",0.145219805397076
+1998,"CA","Machines & Mechanical Engineering",0.0715226701788417
+1998,"CA","Pharmaceuticals & Biotechnology",0.201686016676338
+1998,"CA","Transport",NA
 1998,"CH","Chemistry & Materials",0.044849368603119
 1998,"CH","Consumer Goods & Civil Engineering",0.0243939611337863
 1998,"CH","Electrical & Audiovisual Technologies",0.0314016656356674
@@ -1550,15 +1591,6 @@
 1998,"DK","Information & Communication Technology",0.00689078625263277
 1998,"DK","Machines & Mechanical Engineering",0.0235010791603356
 1998,"DK","Pharmaceuticals & Biotechnology",0.0289118070920171
-1998,"BE","Chemistry & Materials",0.0595197258257505
-1998,"BE","Computer Technology",NA
-1998,"BE","Consumer Goods & Civil Engineering",0.0302123952049186
-1998,"BE","Electrical & Audiovisual Technologies",0.0415277325957798
-1998,"BE","Electrical Machinery",0.037910678196454
-1998,"BE","Information & Communication Technology",0.0423860502935881
-1998,"BE","Instruments",0.0373160230308517
-1998,"BE","Machines & Mechanical Engineering",0.0344739527508409
-1998,"BE","Pharmaceuticals & Biotechnology",0.0509862355023391
 1998,"AT","Chemistry & Materials",0.0307008660938567
 1998,"AT","Consumer Goods & Civil Engineering",0.0196351152811624
 1998,"AT","Electrical & Audiovisual Technologies",0.0206340919891895
@@ -1578,6 +1610,18 @@
 1999,"US","Pharmaceuticals & Biotechnology",0.204185544393724
 1999,"US","Semiconductors",0.261298846417483
 1999,"US","Transport",0.0917573118267422
+1999,"CA","Chemistry & Materials",0.159119147352777
+1999,"CA","Computer Technology",0.167085569508138
+1999,"CA","Consumer Goods & Civil Engineering",0.0617430835342952
+1999,"CA","Electrical & Audiovisual Technologies",0.113387831772415
+1999,"CA","Electrical Machinery",0.168509734601074
+1999,"CA","Engines, Turbines, Thermal & Environmental Technologies",0.122391488735535
+1999,"CA","Information & Communication Technology",0.130057814574125
+1999,"CA","Instruments",0.170935760377403
+1999,"CA","Machines & Mechanical Engineering",0.0694081798906429
+1999,"CA","Medical Technology",0.140955774883641
+1999,"CA","Pharmaceuticals & Biotechnology",0.212464275052308
+1999,"CA","Transport",NA
 1999,"CH","Chemistry & Materials",0.0553645600379108
 1999,"CH","Computer Technology",NA
 1999,"CH","Consumer Goods & Civil Engineering",0.0390234754013795
@@ -1683,14 +1727,6 @@
 1999,"DK","Machines & Mechanical Engineering",0.0192893438422974
 1999,"DK","Medical Technology",NA
 1999,"DK","Pharmaceuticals & Biotechnology",0.0306114221831549
-1999,"BE","Chemistry & Materials",0.0585279371864463
-1999,"BE","Consumer Goods & Civil Engineering",0.0469927520013182
-1999,"BE","Electrical & Audiovisual Technologies",0.0414052227001909
-1999,"BE","Electrical Machinery",0.0360485325637609
-1999,"BE","Information & Communication Technology",0.0377229920314195
-1999,"BE","Instruments",0.0447012550780538
-1999,"BE","Machines & Mechanical Engineering",0.0308116237007585
-1999,"BE","Pharmaceuticals & Biotechnology",0.0436994701737645
 1999,"AT","Chemistry & Materials",0.039401802169983
 1999,"AT","Consumer Goods & Civil Engineering",0.0104306842430296
 1999,"AT","Electrical & Audiovisual Technologies",0.0190679544519554
@@ -1711,6 +1747,18 @@
 2000,"US","Pharmaceuticals & Biotechnology",0.213237367202407
 2000,"US","Semiconductors",0.270301059524986
 2000,"US","Transport",0.0913981005159919
+2000,"CA","Chemistry & Materials",0.146627884165261
+2000,"CA","Computer Technology",0.192676827118718
+2000,"CA","Consumer Goods & Civil Engineering",0.073433266426631
+2000,"CA","Electrical & Audiovisual Technologies",0.117049806307288
+2000,"CA","Electrical Machinery",0.181871096328888
+2000,"CA","Engines, Turbines, Thermal & Environmental Technologies",0.12609028111163
+2000,"CA","Information & Communication Technology",0.142389421085614
+2000,"CA","Instruments",0.176844768171424
+2000,"CA","Machines & Mechanical Engineering",0.0601583488734278
+2000,"CA","Medical Technology",0.139929896161743
+2000,"CA","Pharmaceuticals & Biotechnology",0.207472470642126
+2000,"CA","Transport",NA
 2000,"CH","Chemistry & Materials",0.067245493726711
 2000,"CH","Computer Technology",NA
 2000,"CH","Consumer Goods & Civil Engineering",0.041242163036102
@@ -1819,15 +1867,6 @@
 2000,"DK","Instruments",NA
 2000,"DK","Machines & Mechanical Engineering",0.0212642601636046
 2000,"DK","Pharmaceuticals & Biotechnology",0.0302231980619647
-2000,"BE","Chemistry & Materials",0.0592703798689305
-2000,"BE","Computer Technology",NA
-2000,"BE","Consumer Goods & Civil Engineering",0.0515989912188555
-2000,"BE","Electrical & Audiovisual Technologies",0.0368758680500388
-2000,"BE","Electrical Machinery",0.0381931945297671
-2000,"BE","Information & Communication Technology",0.03762152518443
-2000,"BE","Instruments",0.0423395797649794
-2000,"BE","Machines & Mechanical Engineering",0.0333816449951598
-2000,"BE","Pharmaceuticals & Biotechnology",0.0493201446827213
 2000,"AT","Chemistry & Materials",0.0467207289006749
 2000,"AT","Consumer Goods & Civil Engineering",0.0144801810059017
 2000,"AT","Electrical & Audiovisual Technologies",0.0202249763036574
@@ -1850,6 +1889,18 @@
 2001,"US","Pharmaceuticals & Biotechnology",0.22338489614873
 2001,"US","Semiconductors",0.282422337886707
 2001,"US","Transport",0.0990637391201795
+2001,"CA","Chemistry & Materials",0.159733697655703
+2001,"CA","Computer Technology",0.208381746519589
+2001,"CA","Consumer Goods & Civil Engineering",0.0810413695803349
+2001,"CA","Electrical & Audiovisual Technologies",0.133191906959892
+2001,"CA","Electrical Machinery",0.185154099866066
+2001,"CA","Engines, Turbines, Thermal & Environmental Technologies",0.13570556412789
+2001,"CA","Information & Communication Technology",0.156016244609322
+2001,"CA","Instruments",0.18534839430415
+2001,"CA","Machines & Mechanical Engineering",0.0717293029926915
+2001,"CA","Medical Technology",0.131708093188085
+2001,"CA","Pharmaceuticals & Biotechnology",0.228903535758645
+2001,"CA","Transport",NA
 2001,"CH","Chemistry & Materials",0.0655192768634649
 2001,"CH","Computer Technology",NA
 2001,"CH","Consumer Goods & Civil Engineering",0.0461862406726259
@@ -1957,15 +2008,6 @@
 2001,"DK","Instruments",NA
 2001,"DK","Machines & Mechanical Engineering",0.0179153509924086
 2001,"DK","Pharmaceuticals & Biotechnology",0.0375390345682802
-2001,"BE","Chemistry & Materials",0.0647500068337027
-2001,"BE","Computer Technology",NA
-2001,"BE","Consumer Goods & Civil Engineering",0.0522254055016667
-2001,"BE","Electrical & Audiovisual Technologies",0.0443200665468083
-2001,"BE","Electrical Machinery",0.0381948759056158
-2001,"BE","Information & Communication Technology",0.0445270884085708
-2001,"BE","Instruments",0.05513288083236
-2001,"BE","Machines & Mechanical Engineering",0.0369916278842277
-2001,"BE","Pharmaceuticals & Biotechnology",0.048483275490765
 2001,"AT","Chemistry & Materials",0.0470522362225309
 2001,"AT","Computer Technology",NA
 2001,"AT","Consumer Goods & Civil Engineering",0.0182269765897597
@@ -1989,6 +2031,18 @@
 2002,"US","Pharmaceuticals & Biotechnology",0.234035985694559
 2002,"US","Semiconductors",0.283790335565852
 2002,"US","Transport",0.103160255458094
+2002,"CA","Chemistry & Materials",0.152994998238158
+2002,"CA","Computer Technology",0.222868878904851
+2002,"CA","Consumer Goods & Civil Engineering",0.0596951622581081
+2002,"CA","Electrical & Audiovisual Technologies",0.139425999346412
+2002,"CA","Electrical Machinery",0.191494603366075
+2002,"CA","Engines, Turbines, Thermal & Environmental Technologies",0.135677961331795
+2002,"CA","Information & Communication Technology",0.166187749295213
+2002,"CA","Instruments",0.194159767737998
+2002,"CA","Machines & Mechanical Engineering",0.0688380304971604
+2002,"CA","Medical Technology",0.143426048960359
+2002,"CA","Pharmaceuticals & Biotechnology",0.225605550749599
+2002,"CA","Transport",0.0815586617620658
 2002,"CH","Chemistry & Materials",0.0625092895466472
 2002,"CH","Computer Technology",NA
 2002,"CH","Consumer Goods & Civil Engineering",0.0538584049479443
@@ -2097,15 +2151,6 @@
 2002,"DK","Machines & Mechanical Engineering",0.0175936270427241
 2002,"DK","Medical Technology",NA
 2002,"DK","Pharmaceuticals & Biotechnology",0.0440231175127894
-2002,"BE","Chemistry & Materials",0.0590155083265511
-2002,"BE","Computer Technology",0.0293077154192249
-2002,"BE","Consumer Goods & Civil Engineering",0.0592620103636551
-2002,"BE","Electrical & Audiovisual Technologies",0.0445033977113741
-2002,"BE","Electrical Machinery",0.0393366123106716
-2002,"BE","Information & Communication Technology",0.0536250883702855
-2002,"BE","Instruments",0.0637082325838254
-2002,"BE","Machines & Mechanical Engineering",0.0405009556503142
-2002,"BE","Pharmaceuticals & Biotechnology",0.0515511066034978
 2002,"AT","Chemistry & Materials",0.0331048676787208
 2002,"AT","Consumer Goods & Civil Engineering",0.0195086309016721
 2002,"AT","Electrical & Audiovisual Technologies",0.0146030825767677
@@ -2128,6 +2173,18 @@
 2003,"US","Pharmaceuticals & Biotechnology",0.240702711519006
 2003,"US","Semiconductors",0.283990020541643
 2003,"US","Transport",0.0967274132233117
+2003,"CA","Chemistry & Materials",0.168388956971518
+2003,"CA","Computer Technology",0.239074437402029
+2003,"CA","Consumer Goods & Civil Engineering",0.0581208977778054
+2003,"CA","Electrical & Audiovisual Technologies",0.149868421400024
+2003,"CA","Electrical Machinery",0.192272163577241
+2003,"CA","Engines, Turbines, Thermal & Environmental Technologies",0.135158079809056
+2003,"CA","Information & Communication Technology",0.176264599877871
+2003,"CA","Instruments",0.18065836602282
+2003,"CA","Machines & Mechanical Engineering",0.0845844021776888
+2003,"CA","Medical Technology",0.128219172367199
+2003,"CA","Pharmaceuticals & Biotechnology",0.235077350995852
+2003,"CA","Transport",0.110836373976508
 2003,"CH","Chemistry & Materials",0.0620704901037326
 2003,"CH","Computer Technology",0.0699194176064496
 2003,"CH","Consumer Goods & Civil Engineering",0.057271291045477
@@ -2236,15 +2293,6 @@
 2003,"DK","Machines & Mechanical Engineering",0.0154692803298909
 2003,"DK","Medical Technology",NA
 2003,"DK","Pharmaceuticals & Biotechnology",0.0357341829370182
-2003,"BE","Chemistry & Materials",0.0558430425769736
-2003,"BE","Computer Technology",0.0346558579713048
-2003,"BE","Consumer Goods & Civil Engineering",0.0603820318048122
-2003,"BE","Electrical & Audiovisual Technologies",0.0490844708824447
-2003,"BE","Electrical Machinery",0.041771642823858
-2003,"BE","Information & Communication Technology",0.0542592353735396
-2003,"BE","Instruments",0.0563946726524122
-2003,"BE","Machines & Mechanical Engineering",0.0421407071256521
-2003,"BE","Pharmaceuticals & Biotechnology",0.0584845496829648
 2003,"AT","Chemistry & Materials",0.0315236444473354
 2003,"AT","Consumer Goods & Civil Engineering",0.0165892966767301
 2003,"AT","Electrical & Audiovisual Technologies",0.0157482176423502
@@ -2266,6 +2314,18 @@
 2004,"US","Pharmaceuticals & Biotechnology",0.251203047737893
 2004,"US","Semiconductors",0.280845981674471
 2004,"US","Transport",0.0989534246086619
+2004,"CA","Chemistry & Materials",0.167952503023168
+2004,"CA","Computer Technology",0.236239139292944
+2004,"CA","Consumer Goods & Civil Engineering",0.0599376962496838
+2004,"CA","Electrical & Audiovisual Technologies",0.156115999226857
+2004,"CA","Electrical Machinery",0.199101307828013
+2004,"CA","Engines, Turbines, Thermal & Environmental Technologies",0.127923281707758
+2004,"CA","Information & Communication Technology",0.179097351139547
+2004,"CA","Instruments",0.173113551344463
+2004,"CA","Machines & Mechanical Engineering",0.0855206978887921
+2004,"CA","Medical Technology",0.121733268084815
+2004,"CA","Pharmaceuticals & Biotechnology",0.251013630004917
+2004,"CA","Transport",0.111648076285176
 2004,"CH","Chemistry & Materials",0.0655240446847798
 2004,"CH","Computer Technology",0.0618761676976133
 2004,"CH","Consumer Goods & Civil Engineering",0.0558191129208541
@@ -2375,15 +2435,6 @@
 2004,"DK","Machines & Mechanical Engineering",0.0143491197868251
 2004,"DK","Medical Technology",NA
 2004,"DK","Pharmaceuticals & Biotechnology",0.0326225155764052
-2004,"BE","Chemistry & Materials",0.0542719881761622
-2004,"BE","Computer Technology",0.0387294867702982
-2004,"BE","Consumer Goods & Civil Engineering",0.048423670783477
-2004,"BE","Electrical & Audiovisual Technologies",0.0534018756584023
-2004,"BE","Electrical Machinery",0.051093338170903
-2004,"BE","Information & Communication Technology",0.0667517235654115
-2004,"BE","Instruments",0.0577059340907223
-2004,"BE","Machines & Mechanical Engineering",0.0411395425332256
-2004,"BE","Pharmaceuticals & Biotechnology",0.0584988194866432
 2004,"AT","Chemistry & Materials",0.031108434664227
 2004,"AT","Computer Technology",NA
 2004,"AT","Consumer Goods & Civil Engineering",0.0181540995023751
@@ -2407,6 +2458,17 @@
 2005,"US","Pharmaceuticals & Biotechnology",0.257235200756947
 2005,"US","Semiconductors",0.281476589340079
 2005,"US","Transport",0.106328795839427
+2005,"CA","Chemistry & Materials",0.163310775328628
+2005,"CA","Computer Technology",0.239980913623522
+2005,"CA","Consumer Goods & Civil Engineering",0.0621820603137617
+2005,"CA","Electrical & Audiovisual Technologies",0.164744018367161
+2005,"CA","Electrical Machinery",0.206437665063242
+2005,"CA","Engines, Turbines, Thermal & Environmental Technologies",0.125784741956264
+2005,"CA","Information & Communication Technology",0.1878983406822
+2005,"CA","Instruments",0.179520365867273
+2005,"CA","Machines & Mechanical Engineering",0.097180403165015
+2005,"CA","Medical Technology",0.138330414812065
+2005,"CA","Pharmaceuticals & Biotechnology",0.256277638894428
 2005,"CH","Chemistry & Materials",0.0490796823368015
 2005,"CH","Computer Technology",0.0596979791194817
 2005,"CH","Consumer Goods & Civil Engineering",0.0535937768731033
@@ -2516,15 +2578,6 @@
 2005,"DK","Machines & Mechanical Engineering",0.0128279637803654
 2005,"DK","Medical Technology",0.0260204257360471
 2005,"DK","Pharmaceuticals & Biotechnology",0.0421606445022589
-2005,"BE","Chemistry & Materials",0.0450877858259409
-2005,"BE","Computer Technology",0.0389640547176351
-2005,"BE","Consumer Goods & Civil Engineering",0.0381277485580489
-2005,"BE","Electrical & Audiovisual Technologies",0.0554550215002253
-2005,"BE","Electrical Machinery",0.0556872569910827
-2005,"BE","Information & Communication Technology",0.0684469258408605
-2005,"BE","Instruments",0.0594171499602978
-2005,"BE","Machines & Mechanical Engineering",0.0451503932819327
-2005,"BE","Pharmaceuticals & Biotechnology",0.063430163243043
 2005,"AT","Chemistry & Materials",0.0228952507339264
 2005,"AT","Computer Technology",NA
 2005,"AT","Consumer Goods & Civil Engineering",0.0159302674351227
@@ -2548,6 +2601,18 @@
 2006,"US","Pharmaceuticals & Biotechnology",0.261170559457464
 2006,"US","Semiconductors",0.288917769075563
 2006,"US","Transport",0.106956046900599
+2006,"CA","Chemistry & Materials",0.176266110573926
+2006,"CA","Computer Technology",0.250946518142275
+2006,"CA","Consumer Goods & Civil Engineering",0.0561241116419718
+2006,"CA","Electrical & Audiovisual Technologies",0.169144782314246
+2006,"CA","Electrical Machinery",0.212063430094961
+2006,"CA","Engines, Turbines, Thermal & Environmental Technologies",0.135895986580142
+2006,"CA","Information & Communication Technology",0.195060146736965
+2006,"CA","Instruments",0.181314157413807
+2006,"CA","Machines & Mechanical Engineering",0.0960857835834623
+2006,"CA","Medical Technology",0.15292049749949
+2006,"CA","Pharmaceuticals & Biotechnology",0.267857252095175
+2006,"CA","Transport",0.116743725358296
 2006,"CH","Chemistry & Materials",0.0593011446585802
 2006,"CH","Computer Technology",0.0591649539020441
 2006,"CH","Consumer Goods & Civil Engineering",0.0706456998020539
@@ -2659,15 +2724,6 @@
 2006,"DK","Machines & Mechanical Engineering",0.0125542005175953
 2006,"DK","Medical Technology",0.0395905934613457
 2006,"DK","Pharmaceuticals & Biotechnology",0.039360161187889
-2006,"BE","Chemistry & Materials",0.0411999725392864
-2006,"BE","Computer Technology",0.0404287568566219
-2006,"BE","Consumer Goods & Civil Engineering",0.0452852827294102
-2006,"BE","Electrical & Audiovisual Technologies",0.0511349942254554
-2006,"BE","Electrical Machinery",0.0603980958972262
-2006,"BE","Information & Communication Technology",0.0707184799728028
-2006,"BE","Instruments",0.0516356271670275
-2006,"BE","Machines & Mechanical Engineering",0.0465543235715178
-2006,"BE","Pharmaceuticals & Biotechnology",0.0621409879992753
 2006,"AT","Chemistry & Materials",0.0262223484167313
 2006,"AT","Computer Technology",NA
 2006,"AT","Consumer Goods & Civil Engineering",0.0124159710247878
@@ -2691,6 +2747,18 @@
 2007,"US","Pharmaceuticals & Biotechnology",0.266946576826908
 2007,"US","Semiconductors",0.29415078280965
 2007,"US","Transport",0.104840444163048
+2007,"CA","Chemistry & Materials",0.191608660697353
+2007,"CA","Computer Technology",0.264403657734006
+2007,"CA","Consumer Goods & Civil Engineering",0.0637743208233558
+2007,"CA","Electrical & Audiovisual Technologies",0.179396033768515
+2007,"CA","Electrical Machinery",0.226038050696565
+2007,"CA","Engines, Turbines, Thermal & Environmental Technologies",0.126925700667871
+2007,"CA","Information & Communication Technology",0.207693020506608
+2007,"CA","Instruments",0.178570758209947
+2007,"CA","Machines & Mechanical Engineering",0.0997445491291598
+2007,"CA","Medical Technology",0.14137364248746
+2007,"CA","Pharmaceuticals & Biotechnology",0.262169432950918
+2007,"CA","Transport",0.104889153837106
 2007,"CH","Chemistry & Materials",0.0696125210206177
 2007,"CH","Computer Technology",0.053974025417841
 2007,"CH","Consumer Goods & Civil Engineering",0.0670802908900481
@@ -2801,15 +2869,6 @@
 2007,"DK","Machines & Mechanical Engineering",0.00688498355048426
 2007,"DK","Medical Technology",0.0320715353044241
 2007,"DK","Pharmaceuticals & Biotechnology",0.0368412073430961
-2007,"BE","Chemistry & Materials",0.0458005676510163
-2007,"BE","Computer Technology",0.0512305312826173
-2007,"BE","Consumer Goods & Civil Engineering",0.0365611984532311
-2007,"BE","Electrical & Audiovisual Technologies",0.0475401344034146
-2007,"BE","Electrical Machinery",0.0615453654733533
-2007,"BE","Information & Communication Technology",0.0676588401486158
-2007,"BE","Instruments",0.0493808371089489
-2007,"BE","Machines & Mechanical Engineering",0.0451231444501702
-2007,"BE","Pharmaceuticals & Biotechnology",0.0646566561075735
 2007,"AT","Chemistry & Materials",0.0264057865976339
 2007,"AT","Computer Technology",0.0320503501035512
 2007,"AT","Consumer Goods & Civil Engineering",0.0191322374168473
@@ -2833,6 +2892,17 @@
 2008,"US","Pharmaceuticals & Biotechnology",0.268591737277789
 2008,"US","Semiconductors",0.301759472077829
 2008,"US","Transport",0.111922746634547
+2008,"CA","Chemistry & Materials",0.194608527363671
+2008,"CA","Computer Technology",0.263092592646573
+2008,"CA","Consumer Goods & Civil Engineering",0.0839799824389444
+2008,"CA","Electrical & Audiovisual Technologies",0.179645208729443
+2008,"CA","Electrical Machinery",0.238477456468553
+2008,"CA","Engines, Turbines, Thermal & Environmental Technologies",0.123275060022633
+2008,"CA","Information & Communication Technology",0.211667303759274
+2008,"CA","Instruments",0.185002439368315
+2008,"CA","Machines & Mechanical Engineering",0.0971354883152349
+2008,"CA","Medical Technology",0.154551877058191
+2008,"CA","Pharmaceuticals & Biotechnology",0.272950962001935
 2008,"CH","Chemistry & Materials",0.0692172916360224
 2008,"CH","Computer Technology",0.0571956200880765
 2008,"CH","Consumer Goods & Civil Engineering",0.0584843858185804
@@ -2943,15 +3013,6 @@
 2008,"DK","Instruments",0.0224538072261179
 2008,"DK","Machines & Mechanical Engineering",0.00769352223526948
 2008,"DK","Pharmaceuticals & Biotechnology",0.0322010140815876
-2008,"BE","Chemistry & Materials",0.0519302617087515
-2008,"BE","Computer Technology",0.051909871404527
-2008,"BE","Consumer Goods & Civil Engineering",0.0381205980772107
-2008,"BE","Electrical & Audiovisual Technologies",0.0477768367738135
-2008,"BE","Electrical Machinery",0.0663912718417266
-2008,"BE","Information & Communication Technology",0.0743463077804526
-2008,"BE","Instruments",0.048664691448401
-2008,"BE","Machines & Mechanical Engineering",0.0465920845026581
-2008,"BE","Pharmaceuticals & Biotechnology",0.0668165952237343
 2008,"AT","Chemistry & Materials",0.0334142866467662
 2008,"AT","Computer Technology",0.0343423350188243
 2008,"AT","Consumer Goods & Civil Engineering",0.0226326885559881
@@ -2975,6 +3036,17 @@
 2009,"US","Pharmaceuticals & Biotechnology",0.270240780109339
 2009,"US","Semiconductors",0.30471459739977
 2009,"US","Transport",0.115311927541891
+2009,"CA","Chemistry & Materials",0.195187293062953
+2009,"CA","Computer Technology",0.276576223622014
+2009,"CA","Consumer Goods & Civil Engineering",0.0900145867743445
+2009,"CA","Electrical & Audiovisual Technologies",0.187402771345007
+2009,"CA","Electrical Machinery",0.248483623182188
+2009,"CA","Engines, Turbines, Thermal & Environmental Technologies",0.13252234066884
+2009,"CA","Information & Communication Technology",0.223671450036361
+2009,"CA","Instruments",0.190783029611298
+2009,"CA","Machines & Mechanical Engineering",0.101630630454475
+2009,"CA","Medical Technology",0.177308645146515
+2009,"CA","Pharmaceuticals & Biotechnology",0.256255086531567
 2009,"CH","Chemistry & Materials",0.0626085707791741
 2009,"CH","Computer Technology",0.0684232919291127
 2009,"CH","Consumer Goods & Civil Engineering",0.0633407987752625
@@ -3086,15 +3158,6 @@
 2009,"DK","Machines & Mechanical Engineering",0.00759299985490246
 2009,"DK","Medical Technology",0.0401902930271369
 2009,"DK","Pharmaceuticals & Biotechnology",0.0328066559503042
-2009,"BE","Chemistry & Materials",0.0491976756491739
-2009,"BE","Computer Technology",0.0487226647990809
-2009,"BE","Consumer Goods & Civil Engineering",0.0392802064941656
-2009,"BE","Electrical & Audiovisual Technologies",0.0439687198103709
-2009,"BE","Electrical Machinery",0.064872124676699
-2009,"BE","Information & Communication Technology",0.0802058137957273
-2009,"BE","Instruments",0.0553074141329328
-2009,"BE","Machines & Mechanical Engineering",0.0492372299905978
-2009,"BE","Pharmaceuticals & Biotechnology",0.0726255268055465
 2009,"AT","Chemistry & Materials",0.0350495975123799
 2009,"AT","Computer Technology",0.0384872390092109
 2009,"AT","Consumer Goods & Civil Engineering",0.0281098163145588
@@ -3118,6 +3181,18 @@
 2010,"US","Pharmaceuticals & Biotechnology",0.270063094078295
 2010,"US","Semiconductors",0.317612724798152
 2010,"US","Transport",0.114291274101469
+2010,"CA","Chemistry & Materials",0.220198211809198
+2010,"CA","Computer Technology",0.279253450282046
+2010,"CA","Consumer Goods & Civil Engineering",0.0859582994508445
+2010,"CA","Electrical & Audiovisual Technologies",0.193604469089268
+2010,"CA","Electrical Machinery",0.252572794628014
+2010,"CA","Engines, Turbines, Thermal & Environmental Technologies",0.145722148790637
+2010,"CA","Information & Communication Technology",0.239467299922314
+2010,"CA","Instruments",0.198063145082042
+2010,"CA","Machines & Mechanical Engineering",0.0978881303424095
+2010,"CA","Medical Technology",0.185149369141377
+2010,"CA","Pharmaceuticals & Biotechnology",0.261625185063137
+2010,"CA","Transport",0.0973709751065106
 2010,"CH","Chemistry & Materials",0.0727215452368608
 2010,"CH","Computer Technology",0.0831558755382956
 2010,"CH","Consumer Goods & Civil Engineering",0.0626604015620523
@@ -3228,15 +3303,6 @@
 2010,"DK","Machines & Mechanical Engineering",0.0135561921135705
 2010,"DK","Medical Technology",0.0472683281208557
 2010,"DK","Pharmaceuticals & Biotechnology",0.0283658578438289
-2010,"BE","Chemistry & Materials",0.0614802606296348
-2010,"BE","Computer Technology",0.0609647463430566
-2010,"BE","Consumer Goods & Civil Engineering",0.0386423291787252
-2010,"BE","Electrical & Audiovisual Technologies",0.0451318116865104
-2010,"BE","Electrical Machinery",0.0654621584836607
-2010,"BE","Information & Communication Technology",0.0894714232334455
-2010,"BE","Instruments",0.0652931467305261
-2010,"BE","Machines & Mechanical Engineering",0.0451702574539924
-2010,"BE","Pharmaceuticals & Biotechnology",0.0679774375471857
 2010,"AT","Chemistry & Materials",0.0423649343605013
 2010,"AT","Computer Technology",0.0352824773076712
 2010,"AT","Consumer Goods & Civil Engineering",0.0258586128494706
@@ -3260,6 +3326,18 @@
 2011,"US","Pharmaceuticals & Biotechnology",0.272077297411169
 2011,"US","Semiconductors",0.323043121286976
 2011,"US","Transport",0.11367375232454
+2011,"CA","Chemistry & Materials",0.221156529771289
+2011,"CA","Computer Technology",0.273835781987363
+2011,"CA","Consumer Goods & Civil Engineering",0.0987938515622332
+2011,"CA","Electrical & Audiovisual Technologies",0.196748975605426
+2011,"CA","Electrical Machinery",0.256372491083447
+2011,"CA","Engines, Turbines, Thermal & Environmental Technologies",0.154011700770912
+2011,"CA","Information & Communication Technology",0.245554616057962
+2011,"CA","Instruments",0.196370087109423
+2011,"CA","Machines & Mechanical Engineering",0.0942188360600257
+2011,"CA","Medical Technology",0.199488020929735
+2011,"CA","Pharmaceuticals & Biotechnology",0.253793304376756
+2011,"CA","Transport",0.0644845299222528
 2011,"CH","Chemistry & Materials",0.0672110601056161
 2011,"CH","Computer Technology",0.103208333460501
 2011,"CH","Consumer Goods & Civil Engineering",0.0461566590854523
@@ -3371,15 +3449,6 @@
 2011,"DK","Machines & Mechanical Engineering",0.0136060430650325
 2011,"DK","Medical Technology",0.0452758836751036
 2011,"DK","Pharmaceuticals & Biotechnology",0.0325813957373392
-2011,"BE","Chemistry & Materials",0.0697503050948111
-2011,"BE","Computer Technology",0.0786728148662728
-2011,"BE","Consumer Goods & Civil Engineering",0.0420926012200683
-2011,"BE","Electrical & Audiovisual Technologies",0.0453539829136679
-2011,"BE","Electrical Machinery",0.0678164194318087
-2011,"BE","Information & Communication Technology",0.0956670427271501
-2011,"BE","Instruments",0.0713751251269586
-2011,"BE","Machines & Mechanical Engineering",0.0423267896205882
-2011,"BE","Pharmaceuticals & Biotechnology",0.0705502859407235
 2011,"AT","Chemistry & Materials",0.0461793351232885
 2011,"AT","Computer Technology",0.0459325804962913
 2011,"AT","Consumer Goods & Civil Engineering",0.0396882011720961
@@ -3403,6 +3472,18 @@
 2012,"US","Pharmaceuticals & Biotechnology",0.276804107240922
 2012,"US","Semiconductors",0.330799200773481
 2012,"US","Transport",0.113570198985446
+2012,"CA","Chemistry & Materials",0.22897590166955
+2012,"CA","Computer Technology",0.265527099101242
+2012,"CA","Consumer Goods & Civil Engineering",0.106573099166341
+2012,"CA","Electrical & Audiovisual Technologies",0.205360146853861
+2012,"CA","Electrical Machinery",0.250342235271308
+2012,"CA","Engines, Turbines, Thermal & Environmental Technologies",0.161459593482061
+2012,"CA","Information & Communication Technology",0.255498728748621
+2012,"CA","Instruments",0.20106960988201
+2012,"CA","Machines & Mechanical Engineering",0.103163596296134
+2012,"CA","Medical Technology",0.203263294406874
+2012,"CA","Pharmaceuticals & Biotechnology",0.281155413308448
+2012,"CA","Transport",0.0700969431642312
 2012,"CH","Chemistry & Materials",0.065037866735648
 2012,"CH","Computer Technology",0.120381881698345
 2012,"CH","Consumer Goods & Civil Engineering",0.0499318482386543
@@ -3513,15 +3594,6 @@
 2012,"DK","Machines & Mechanical Engineering",0.0242375087740332
 2012,"DK","Medical Technology",0.0321985553052214
 2012,"DK","Pharmaceuticals & Biotechnology",0.0373116959048439
-2012,"BE","Chemistry & Materials",0.0699197633531828
-2012,"BE","Computer Technology",0.0916055539417897
-2012,"BE","Consumer Goods & Civil Engineering",0.0405470900122987
-2012,"BE","Electrical & Audiovisual Technologies",0.051604311170991
-2012,"BE","Electrical Machinery",0.0785547213135575
-2012,"BE","Information & Communication Technology",0.108235593964614
-2012,"BE","Instruments",0.0754148677274063
-2012,"BE","Machines & Mechanical Engineering",0.0374982186437613
-2012,"BE","Pharmaceuticals & Biotechnology",0.0709597196366885
 2012,"AT","Chemistry & Materials",0.0492943767415361
 2012,"AT","Computer Technology",0.0607423197626304
 2012,"AT","Consumer Goods & Civil Engineering",0.0393214217414354
@@ -3545,6 +3617,18 @@
 2013,"US","Pharmaceuticals & Biotechnology",0.279675637331818
 2013,"US","Semiconductors",0.345141082726436
 2013,"US","Transport",0.111358317176284
+2013,"CA","Chemistry & Materials",0.233023593860845
+2013,"CA","Computer Technology",0.274133211667361
+2013,"CA","Consumer Goods & Civil Engineering",0.0932994510641192
+2013,"CA","Electrical & Audiovisual Technologies",0.221848436120433
+2013,"CA","Electrical Machinery",0.257954825686601
+2013,"CA","Engines, Turbines, Thermal & Environmental Technologies",0.187398990133507
+2013,"CA","Information & Communication Technology",0.26855354804385
+2013,"CA","Instruments",0.210144813133414
+2013,"CA","Machines & Mechanical Engineering",0.109364197469276
+2013,"CA","Medical Technology",0.213655379537775
+2013,"CA","Pharmaceuticals & Biotechnology",0.283610421715091
+2013,"CA","Transport",0.0716167328609569
 2013,"CH","Chemistry & Materials",0.0822902782525527
 2013,"CH","Computer Technology",0.11590621781095
 2013,"CH","Consumer Goods & Civil Engineering",0.0609206574194495
@@ -3656,15 +3740,6 @@
 2013,"DK","Machines & Mechanical Engineering",0.0318540171767426
 2013,"DK","Medical Technology",0.0445025605431996
 2013,"DK","Pharmaceuticals & Biotechnology",0.0434143411453615
-2013,"BE","Chemistry & Materials",0.0679652648073931
-2013,"BE","Computer Technology",0.0926540172702361
-2013,"BE","Consumer Goods & Civil Engineering",0.0410109476694614
-2013,"BE","Electrical & Audiovisual Technologies",0.0519763675215328
-2013,"BE","Electrical Machinery",0.0750026194845478
-2013,"BE","Information & Communication Technology",0.110752561136125
-2013,"BE","Instruments",0.0953868500627507
-2013,"BE","Machines & Mechanical Engineering",0.0445259948388403
-2013,"BE","Pharmaceuticals & Biotechnology",0.0742679589565232
 2013,"AT","Chemistry & Materials",0.0393343327681156
 2013,"AT","Computer Technology",0.0545708968046925
 2013,"AT","Consumer Goods & Civil Engineering",0.0396938309402928
@@ -3688,6 +3763,18 @@
 2014,"US","Pharmaceuticals & Biotechnology",0.281272796809234
 2014,"US","Semiconductors",0.364110011240423
 2014,"US","Transport",0.112350502398042
+2014,"CA","Chemistry & Materials",0.240420609022885
+2014,"CA","Computer Technology",0.273203862965797
+2014,"CA","Consumer Goods & Civil Engineering",0.108037269222923
+2014,"CA","Electrical & Audiovisual Technologies",0.220431346768265
+2014,"CA","Electrical Machinery",0.256682948489421
+2014,"CA","Engines, Turbines, Thermal & Environmental Technologies",0.203002275642582
+2014,"CA","Information & Communication Technology",0.276058117286377
+2014,"CA","Instruments",0.219498891202163
+2014,"CA","Machines & Mechanical Engineering",0.111265511183868
+2014,"CA","Medical Technology",0.210727558083791
+2014,"CA","Pharmaceuticals & Biotechnology",0.29188642763575
+2014,"CA","Transport",0.0832000357341275
 2014,"CH","Chemistry & Materials",0.0974864323563048
 2014,"CH","Computer Technology",0.1216394410974
 2014,"CH","Consumer Goods & Civil Engineering",0.0647471812022726
@@ -3799,15 +3886,6 @@
 2014,"DK","Machines & Mechanical Engineering",0.0317956571839211
 2014,"DK","Medical Technology",0.0475858399221572
 2014,"DK","Pharmaceuticals & Biotechnology",0.0542067108803597
-2014,"BE","Chemistry & Materials",0.0741466320021256
-2014,"BE","Computer Technology",0.0999593424789201
-2014,"BE","Consumer Goods & Civil Engineering",0.0504879524906618
-2014,"BE","Electrical & Audiovisual Technologies",0.067475399613594
-2014,"BE","Electrical Machinery",0.0792627875720104
-2014,"BE","Information & Communication Technology",0.108454561791646
-2014,"BE","Instruments",0.0839745657407344
-2014,"BE","Machines & Mechanical Engineering",0.054913049136515
-2014,"BE","Pharmaceuticals & Biotechnology",0.0731701664004364
 2014,"AT","Chemistry & Materials",0.0337407457778039
 2014,"AT","Computer Technology",0.0696779812935573
 2014,"AT","Consumer Goods & Civil Engineering",0.0361189966212799
@@ -3831,6 +3909,18 @@
 2015,"US","Pharmaceuticals & Biotechnology",0.287699954585258
 2015,"US","Semiconductors",0.379561817184335
 2015,"US","Transport",0.120874091814905
+2015,"CA","Chemistry & Materials",0.239434030141157
+2015,"CA","Computer Technology",0.285515821570944
+2015,"CA","Consumer Goods & Civil Engineering",0.11500925448399
+2015,"CA","Electrical & Audiovisual Technologies",0.229340721935329
+2015,"CA","Electrical Machinery",0.263102388735534
+2015,"CA","Engines, Turbines, Thermal & Environmental Technologies",0.208742294988647
+2015,"CA","Information & Communication Technology",0.275388783330031
+2015,"CA","Instruments",0.225707942138915
+2015,"CA","Machines & Mechanical Engineering",0.113816182527163
+2015,"CA","Medical Technology",0.210390206435505
+2015,"CA","Pharmaceuticals & Biotechnology",0.286961462156382
+2015,"CA","Transport",0.0844350846170193
 2015,"CH","Chemistry & Materials",0.0988462351617841
 2015,"CH","Computer Technology",0.135330395541649
 2015,"CH","Consumer Goods & Civil Engineering",0.0719658696404645
@@ -3942,15 +4032,6 @@
 2015,"DK","Machines & Mechanical Engineering",0.024677432581639
 2015,"DK","Medical Technology",0.04882126951569
 2015,"DK","Pharmaceuticals & Biotechnology",0.058201967702725
-2015,"BE","Chemistry & Materials",0.0806534381601598
-2015,"BE","Computer Technology",0.102821179337038
-2015,"BE","Consumer Goods & Civil Engineering",0.0438180019160499
-2015,"BE","Electrical & Audiovisual Technologies",0.071704688948372
-2015,"BE","Electrical Machinery",0.0816585800636719
-2015,"BE","Information & Communication Technology",0.111106325439466
-2015,"BE","Instruments",0.0847129762149728
-2015,"BE","Machines & Mechanical Engineering",0.0575572256454796
-2015,"BE","Pharmaceuticals & Biotechnology",0.0767909172631891
 2015,"AT","Chemistry & Materials",0.0421800146158704
 2015,"AT","Computer Technology",0.07068489441213
 2015,"AT","Consumer Goods & Civil Engineering",0.0358565967578036

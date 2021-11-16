@@ -1,0 +1,239 @@
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/css/bootstrap-select.min.css">
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/js/bootstrap-select.min.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/3.2.1/math.min.js"></script>
+  <script src= "https://d3js.org/d3.v4.min.js"></script>  
+  <script src= "https://d3js.org/d3-color.v1.min.js"></script>  
+  <script src= "https://d3js.org/d3-interpolate.v1.min.js"></script>  
+  <script src= "https://d3js.org/d3-scale-chromatic.v1.min.js"></script>  
+  <link rel="stylesheet" href="style.css" type="text/css" />
+
+<script>
+
+function roundToTwo(num) {    
+    return +(Math.round(num + "e+1")  + "e-1");
+}
+
+Plotly.d3.csv("https://raw.githubusercontent.com/ch54321/mrna_tech/master/ctry_trend_mrna.csv", function(err, rows){
+function unpack(rows, key) {
+        return rows.map(function(row) { return row[key]; });
+    }
+
+var     allTech = unpack(rows, 'ctry_inv'),
+        pat_value = unpack(rows, 'value'),
+        filing = unpack(rows, 'filing'),
+        variable = unpack(rows, 'variable'),
+        ctry_name = unpack(rows, 'ctry_name'),
+        listofCountries = [],
+        currentCountry = [],
+        currentpat_value = [],
+        currentInv = [],
+      //  currentcountryName = [];
+        color_var = [];
+        current_color = [];
+
+
+    for (var i = 0; i < allTech.length; i++ ){
+        if (listofCountries.indexOf(allTech[i]) === -1 ){
+            listofCountries.push(allTech[i]);
+        }
+    }
+    
+    
+   function getCountryData(chosenCountry, chosenvar_2) {
+        currentfiling = [];
+        currentpat_value = [];
+        currentInv = [];
+        currentFiling = [];
+        text_var = [];
+     //   currentcountryName = [];
+     //           document.getElementById("demo").innerHTML = variable;
+
+        for (var i = 0 ; i < allTech.length ; i++){
+        for(var j = 0; j < allTech.length; j ++){
+            for(var k = 0; k < allTech.length; k ++){
+            if ( allTech[i] === chosenCountry[j] && variable[i] === chosenvar_2[k]) {
+                currentpat_value.push(pat_value[i]);
+                currentInv.push(allTech[i]);
+                currentFiling.push(filing[i]);
+                text_var.push('Country: ' + ctry_name[i] + '<br>' +  
+                          'Filing: ' + filing[i] + '<br>' +
+                          'Value: ' + roundToTwo(pat_value[i]*100) + '%');
+
+
+          //      current_color.push(color_var[i]);
+         //       currentcountryName.push(allcountryName[i]);
+                }
+        }
+
+      }
+
+    }
+    
+};
+
+
+
+    // Default Country Data
+    setBubblePlot(["CH", "DE", "US", "JP", "CN"], ["mrna_pharma_i"]);
+
+    function setBubblePlot(chosenCountry, chosenvar_2) {
+        getCountryData(chosenCountry, chosenvar_2);
+
+
+if(chosenvar_2 == "mrna_pharma_i"){
+  var y_title = '<b>Share of mRNA in<br>pharmaceutical patent applications</b>';
+} else {
+  var y_title = '<b>Country&#39;s share in<br>total mRNA patent applications</b>';
+}
+
+        var trace1 = {
+            y: currentpat_value,
+            x: currentFiling,
+            customdata: text_var,
+            type: 'scatter',
+            mode: 'lines+markers',
+//            line: {dash: 'solid'},
+//            marker: {symbol: ['line-ew',"diamond-open","line-ew","line-ew","diamond-open","line-ew", 'line-ew',"diamond-open","line-ew","line-ew","diamond-open","line-ew"]},
+            hovertemplate:  '%{customdata}' + '<extra></extra>',
+            transforms: [{type: 'groupby', 
+                          groups: currentInv,
+                          styles: [
+                          {target: 'CH', value: {marker: {color: d3.interpolateViridis(0.7)}}},
+                          {target: 'CA', value: {marker: {color: d3.interpolateViridis(0)}}},
+                          {target: 'CN', value: {marker: {color: d3.interpolateViridis(0.1)}}},
+                          {target: 'JP', value: {marker: {color: d3.interpolateViridis(0.65)}}},
+                          {target: 'KR', value: {marker: {color: d3.interpolateViridis(0.3)}}},
+                          {target: 'US', value: {marker: {color: d3.interpolateViridis(0.2)}}},
+                          {target: 'FR', value: {marker: {color: d3.interpolateViridis(0.4)}}},      
+                          {target: 'ES', value: {marker: {color: d3.interpolateViridis(0.5)}}},
+                          {target: 'DE', value: {marker: {color: d3.interpolateViridis(0.9)}}},
+                          {target: 'GB', value: {marker: {color: d3.interpolateViridis(0.8)}}},
+                          {target: 'SE', value: {marker: {color: d3.interpolateViridis(0.6)}}},      
+                          {target: 'IT', value: {marker: {color: d3.interpolateViridis(1)}}}
+                          ]
+            }], 
+        };
+        
+        
+        var data = [trace1];
+
+var layout = {
+  scrollZoom: false,
+  autosize: true,
+//  width: 800,
+//  height: 500,
+  hovermode: "closest",
+    margin: {
+    l: 100,
+    r: 10,
+    b: 100,
+    t: 20
+  },
+
+   xaxis: {
+     fixedrange: true,
+         range: [2011.75, 2020.15],
+
+    title: '<b>Filing year</b>',
+    zeroline: false,
+    showaxis: true,
+    showline: false,
+    ticks: 'outside',
+    showgrid: false
+  },
+  yaxis: {
+    fixedrange: true,
+    title: y_title,
+    showline: false,
+    zeroline: false,
+    tickformat: '.1%', 
+    showgrid: false,
+    ticks: 'outside'
+    }
+};
+
+
+Plotly.newPlot('myDiv', data, layout, {displayModeBar: false});
+    };
+
+var countrySelector = document.getElementById("select_1");
+var chosenvar_2 = document.getElementById("select_2");
+
+
+
+function updateCountry(){
+  var var_2l = [];
+  var var_1l = [];
+
+
+  $.each($("#select_1 option:selected" ), function() {
+  var_2l.push($(this).val());  
+  })
+  
+  $.each($("#select_2 option:selected" ), function() {
+  var_1l.push($(this).val());  
+  })
+  
+ 
+
+ 
+ setBubblePlot(var_2l, var_1l);
+}
+    
+countrySelector.addEventListener('change', updateCountry, false);
+chosenvar_2.addEventListener('change', updateCountry, false);
+
+});    
+
+</script>
+</head>
+
+
+<body>
+<div class="showcase__section" id="bubble">
+  <div id="bubbleplots">
+      <div class="plot" id="plotdiv"></div>
+      <div class="control-row">
+        <select class="selectpicker" id="select_1" name="select1" multiple="multiple" data-actions-box="true">
+        <option value="CA">Canada</option>  
+        <option value="CN" selected>China</option>  
+        <option value="FR">France</option>
+        <option value="DE" selected>Germany</option>
+        <option value="GB">Great Britain</option>
+        <option value="IT">Italy</option>
+        <option value="JP" selected>Japan</option>
+        <option value="KR">South Korea</option>
+        <option value="ES">Spain</option>
+        <option value="SE">Sweden</option>
+        <option value="CH" selected>Switzerland</option>  
+        <option value="US" selected>USA</option>
+        </select>
+    </div>
+  </div>
+</div>
+
+<div class="showcase__section" id="bubble">
+  <div id="bubbleplots">
+      <div class="plot" id="plotdiv"></div>
+      <div class="control-row">
+        <select class="selectpicker" id="select_2" name="select2" data-actions-box="true">
+        <option value="mrna_pharma_i" selected>mRNA in total pharma</option>  
+        <option value="share_mrna_world">Share in total mRNA</option>  
+        </select>
+    </div>
+  </div>
+</div>
+
+
+
+<div id='myDiv'></div>
+
+</body>
+    

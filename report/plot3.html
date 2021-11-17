@@ -20,32 +20,32 @@ function roundToTwo(num) {
     return +(Math.round(num + "e+1")  + "e-1");
 }
 
-Plotly.d3.csv("https://raw.githubusercontent.com/ch54321/mrna_tech/master/ctry_trend_mrna.csv", function(err, rows){
+// LOAD THE DATA
+Plotly.d3.csv("https://raw.githubusercontent.com/cieb-unibas/inventor_ethnicity/main/report/plot3_df.csv", function(err, rows){
 function unpack(rows, key) {
         return rows.map(function(row) { return row[key]; });
     }
 
-var     allTech = unpack(rows, 'ctry_inv'),
-        pat_value = unpack(rows, 'value'),
-        filing = unpack(rows, 'filing'),
-        variable = unpack(rows, 'variable'),
-        ctry_name = unpack(rows, 'ctry_name'),
-        listofCountries = [],
-        currentCountry = [],
-        currentpat_value = [],
+// DEFINE VARIABLES FOR PLOTTING
+var     p_year = unpack(rows, 'p_year'), 
+        country = unpack(rows, 'country'),
+        tech_group = unpack(rows, 'tech_group'),
+        share = unpack(rows, 'share')
+// DEFINE PARAMETERS FOR THE PICKER INPUT
+        list_tech_groups = [],
+        current_tech_group = [],
+        current_share = [],
         currentInv = [],
-      //  currentcountryName = [];
         color_var = [];
         current_color = [];
-
-
+// SELECT A TECH_GROUP
     for (var i = 0; i < allTech.length; i++ ){
-        if (listofCountries.indexOf(allTech[i]) === -1 ){
-            listofCountries.push(allTech[i]);
+        if (listofCountries.indexOf(tech_group[i]) === -1 ){
+            listofCountries.push(tech_group[i]);
         }
     }
     
-    
+// EXTRACT THE DATA FOR THE CHOSEN COUNTRIES    
    function getCountryData(chosenCountry, chosenvar_2) {
         currentfiling = [];
         currentpat_value = [];

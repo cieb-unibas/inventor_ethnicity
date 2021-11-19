@@ -131,3 +131,8 @@ if(length(unique(plot3_df$country)) == length(COUNTRIES)){
 write.csv(x = plot3_df, file = "report/plot3_df.csv", row.names = FALSE)
 print("Data creation completed.")
 
+t <- read.csv("report/plot3_df.csv")
+
+t <- filter(t, country %in% c("US", "CH") & tech_group %in% c("Computer Technology", "Chemistry & Materials"))
+write.csv(t, file = "report/plot3_df.csv", row.names = FALSE)
+

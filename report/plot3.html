@@ -12,183 +12,196 @@
   <script src= "https://d3js.org/d3-color.v1.min.js"></script>  
   <script src= "https://d3js.org/d3-interpolate.v1.min.js"></script>  
   <script src= "https://d3js.org/d3-scale-chromatic.v1.min.js"></script>  
-  <link rel="stylesheet" href="style.css" type="text/css"/>
+  <link rel="stylesheet" href="style.css" type="text/css" />
 
-
-  <!-- DEFINE THE INTERACTIVE PLOT  -->
 <script>
 
 function roundToTwo(num) {    
     return +(Math.round(num + "e+1")  + "e-1");
 }
 
-// LOAD THE DATA
 Plotly.d3.csv("https://raw.githubusercontent.com/cieb-unibas/inventor_ethnicity/main/report/plot3_df.csv", function(err, rows){
 function unpack(rows, key) {
         return rows.map(function(row) { return row[key]; });
     }
 
-// DEFINE VARIABLES FOR PLOTTING
-  var p_year = unpack(rows, 'p_year'), 
-      country = unpack(rows, 'country'),
-      tech_group = unpack(rows, 'tech_group'),
-      share = unpack(rows, 'share'),
-      list_of_countries = []; // all possible countries to display
+var     allTech = unpack(rows, 'country'),
+        pat_value = unpack(rows, 'share'),
+        filing = unpack(rows, 'p_year'),
+        variable = unpack(rows, 'tech_group'),
+    //    ctry_name = unpack(rows, 'country'),
+        currentCountry = [],
+        currentpat_value = [],
+        currentInv = [],
+      //  currentcountryName = [];
+        color_var = [];
+        current_color = [];
 
-// DEFINE THE LIST OF COUNTRIES THAT CAN BE DISPLAYED
-  for (var i = 0; i < country.length; i++){
-      // check if an entry is not included in the 'list_of_countries'
-      if (list_of_countries.indexOf(country[i]) === -1){
-        // if so, append it to the list
-        list_of_countries.push(country[i]);
+
+    
+    
+   function getCountryData(chosenCountry, chosenvar_2) {
+        currentfiling = [];
+        currentpat_value = [];
+        currentInv = [];
+        currentFiling = [];
+        text_var = [];
+     //   currentcountryName = [];
+     //           document.getElementById("demo").innerHTML = variable;
+
+        for (var i = 0 ; i < allTech.length ; i++){
+        for(var j = 0; j < allTech.length; j ++){
+            for(var k = 0; k < allTech.length; k ++){
+            if ( allTech[i] === chosenCountry[j] && variable[i] === chosenvar_2[k]) {
+                currentpat_value.push(pat_value[i]);
+                currentInv.push(allTech[i]);
+                currentFiling.push(filing[i]);
+                text_var.push('Country: ' +  
+                          'Filing: ' + filing[i] + '<br>' +
+                          'Value: ' + roundToTwo(pat_value[i]*100) + '%');
+
+
+          //      current_color.push(color_var[i]);
+         //       currentcountryName.push(allcountryName[i]);
+                }
+        }
+
       }
+
     }
     
-// EXTRACT THE DATA FOR THE CHOSEN COUNTRIES
-  function getCountryData(chosen_country, chosen_tech_group) {
-        current_years = []; // year information to display for the current selection
-        current_share = []; // shares information to display for the current selection
-        current_country = []; // country information to display for the current selection
-        text_var = [];
-        for (var i = 0; i < country.length; i++){
-          for(var j = 0; j < country.length; j++){
-            for(var k = 0; k < country.length; k++){
-              if(country[i] === chosen_country[j] && tech_group[i] === chosen_tech_group[k]){
-                current_share.push(share[i]);
-                current_country.push(country[i]);
-                current_years.push(p_year[i]);
-                text_var.push('Country: ' + country[i] + '<br>' +  
-                          'Year: ' + p_year[i] + '<br>' +
-                          'Share: ' + roundToTwo(share[i]*100) + '%');
-              }
-            }
-          }
-        }
-   };
-   
-// DEFINE THE PLOT FOR THE SELECTED TECH_GROUP AND COUNTRIES
-  function setBubblePlot(chosen_country, chosen_tech_group) {
-    
-    // get the data for plotting
-    getCountryData(chosen_country, chosen_tech_group);
-    
-    // define the data to display
-    var trace1 = {
-      y: current_share,
-      x: current_years,
-      customdata: text_var,
-      type: 'scatter',
-      mode: 'lines+markers',
-      hovertemplate:  '%{customdata}' + '<extra></extra>',
-      transforms: [{type: 'groupby', groups: current_country, styles: [
-                          {target: 'CH', value: {marker: {color: d3.interpolateViridis(0.71)}}},
+};
+
+
+
+    // Default Country Data
+    setBubblePlot(["CH", "DE", "US", "JP", "CN"], ["Computer Technology"]);
+
+    function setBubblePlot(chosenCountry, chosenvar_2) {
+        getCountryData(chosenCountry, chosenvar_2);
+
+
+
+        var trace1 = {
+            y: currentpat_value,
+            x: currentFiling,
+            customdata: text_var,
+            type: 'scatter',
+            mode: 'lines+markers',
+//            line: {dash: 'solid'},
+//            marker: {symbol: ['line-ew',"diamond-open","line-ew","line-ew","diamond-open","line-ew", 'line-ew',"diamond-open","line-ew","line-ew","diamond-open","line-ew"]},
+            hovertemplate:  '%{customdata}' + '<extra></extra>',
+            transforms: [{type: 'groupby', 
+                          groups: currentInv,
+                          styles: [
+                          {target: 'CH', value: {marker: {color: d3.interpolateViridis(0.7)}}},
                           {target: 'CA', value: {marker: {color: d3.interpolateViridis(0)}}},
-                          {target: 'US', value: {marker: {color: d3.interpolateViridis(0.09)}}},
-                          {target: 'FR', value: {marker: {color: d3.interpolateViridis(0.18)}}},      
-                          {target: 'ES', value: {marker: {color: d3.interpolateViridis(0.27)}}},
-                          {target: 'DE', value: {marker: {color: d3.interpolateViridis(0.36)}}},
-                          {target: 'GB', value: {marker: {color: d3.interpolateViridis(0.45)}}},
-                          {target: 'SE', value: {marker: {color: d3.interpolateViridis(0.54)}}},
-                          {target: 'NL', value: {marker: {color: d3.interpolateViridis(0.63)}}},      
-                          {target: 'AT', value: {marker: {color: d3.interpolateViridis(0.80)}}},      
-                          {target: 'DK', value: {marker: {color: d3.interpolateViridis(0.89)}}},      
+                          {target: 'CN', value: {marker: {color: d3.interpolateViridis(0.1)}}},
+                          {target: 'JP', value: {marker: {color: d3.interpolateViridis(0.65)}}},
+                          {target: 'KR', value: {marker: {color: d3.interpolateViridis(0.3)}}},
+                          {target: 'US', value: {marker: {color: d3.interpolateViridis(0.2)}}},
+                          {target: 'FR', value: {marker: {color: d3.interpolateViridis(0.4)}}},      
+                          {target: 'ES', value: {marker: {color: d3.interpolateViridis(0.5)}}},
+                          {target: 'DE', value: {marker: {color: d3.interpolateViridis(0.9)}}},
+                          {target: 'GB', value: {marker: {color: d3.interpolateViridis(0.8)}}},
+                          {target: 'SE', value: {marker: {color: d3.interpolateViridis(0.6)}}},      
                           {target: 'IT', value: {marker: {color: d3.interpolateViridis(1)}}}
                           ]
             }], 
         };
         
-    var data = [trace1];
         
-    var layout = {
-      scrollZoom: false,
-      autosize: true,
-      //  width: 800,
-      //  height: 500,
-      hovermode: "closest",
-      margin: {
-        l: 100,
-        r: 10,
-        b: 100,
-        t: 20},
-      xaxis: {
-        fixedrange: true,
-        range: [1984.75, 2015.15],
-        title: '<b>Year</b>',
-        zeroline: false,
-        showaxis: true,
-        showline: false,
-        ticks: 'outside',
-        showgrid: false
-      },
-      yaxis: {
-          fixedrange: true,
-          range: [0, 0.45],
-          title: '<b>Prevalence of Inventors with Non-Western Ethnic Origins</b>',
-          zeroline: false,
-          showaxis: false,
-          showline: false,
-          ticks: 'outside',
-          tickformat: '.1%',
-          showgrid: false
-        }
-      };
-        
-    Plotly.newPlot('myDiv', data, layout, {displayModeBar: false});
-    };
-   
-  // DEFAULT SELECTIONS FOR THE PLOT
-  setBubblePlot(["CH", "DE", "US", "FR"], ["Computer Technology"]);
+        var data = [trace1];
 
-  // TO UPDATE THE PLOT: DEFINE FROM WHERE TO GET THE USER'S CHOICES
-  var countrySelector = document.getElementById("select_1");
-  var chosen_tech_group = document.getElementById("select_2");
-   
-  // TO UPDATE THE PLOT: DEFINE FUNCTION TO UPDATE THE PLOT BASED ON THE USERS CHOICE
-  function updateCountry(){
-    var var_2l = [];
-    var var_1l = [];
-     
-    // get the user's selected countries and store it in the variable "var2l"
-    $.each($("#select_1 option:selected"), function() {
-      var_2l.push($(this).val());
-    })
-     
-    // get the user's selected tech_group and store it in the variable "var1l"
-    $.each($("#select_2 option:selected"), function() {
-      var_1l.push($(this).val());
-    })
-     
-    // upate the plot with the new variables
-    setBubblePlot(var_2l, var_1l);
-  }
-   
-  // TO UPDATE THE PLOT: UPDATE THE PLOT IF THE USER CHANGES HIS/HER SELECTION
-  countrySelector.addEventListener('change', updateCountry, false);
-  chosen_tech_group.addEventListener('change', updateCountry, false);
-});
+var layout = {
+  scrollZoom: false,
+  autosize: true,
+//  width: 800,
+//  height: 500,
+  hovermode: "closest",
+    margin: {
+    l: 100,
+    r: 10,
+    b: 100,
+    t: 20
+  },
+
+   xaxis: {
+     fixedrange: true,
+         range: [1980, 2015],
+
+    title: '<b>Filing year</b>',
+    zeroline: false,
+    showaxis: true,
+    showline: false,
+    ticks: 'outside',
+    showgrid: false
+  },
+  yaxis: {
+    fixedrange: true,
+    title: y_title,
+    showline: false,
+    zeroline: false,
+    tickformat: '.1%', 
+    showgrid: false,
+    ticks: 'outside'
+    }
+};
+
+
+Plotly.newPlot('myDiv', data, layout, {displayModeBar: false});
+    };
+
+var countrySelector = document.getElementById("select_1");
+var chosenvar_2 = document.getElementById("select_2");
+
+
+function updateCountry(){
+  var var_2l = [];
+  var var_1l = [];
+
+
+  $.each($("#select_1 option:selected" ), function() {
+  var_2l.push($(this).val());  
+  })
+  
+  $.each($("#select_2 option:selected" ), function() {
+  var_1l.push($(this).val());  
+  })
+  
+ 
+
+ 
+ setBubblePlot(var_2l, var_1l);
+}
+    
+countrySelector.addEventListener('change', updateCountry, false);
+chosenvar_2.addEventListener('change', updateCountry, false);
+
+});    
 
 </script>
 </head>
 
-<!-- DEFINE WHAT IS DISPLAYED ON THE WEBPAGE -->
+
 <body>
 <div class="showcase__section" id="bubble">
   <div id="bubbleplots">
-    <div class="plot" id="plotdiv"></div>
-    <div class="control-row">
-      <select class="selectpicker" id="select_1" name="select1" multiple="multiple" data-actions-box="true">
-        <option value="CH" selected>Switzerland</option>
-        <option value="US" selected>USA</option>
-        <option value="DE" selected>Germany</option>
-        <option value="FR" selected>France</option>
+      <div class="plot" id="plotdiv"></div>
+      <div class="control-row">
+        <select class="selectpicker" id="select_1" name="select1" multiple="multiple" data-actions-box="true">
         <option value="CA">Canada</option>  
+        <option value="CN" selected>China</option>  
+        <option value="FR">France</option>
+        <option value="DE" selected>Germany</option>
         <option value="GB">Great Britain</option>
         <option value="IT">Italy</option>
+        <option value="JP" selected>Japan</option>
+        <option value="KR">South Korea</option>
         <option value="ES">Spain</option>
         <option value="SE">Sweden</option>
-        <option value="DK">Denmark</option>
-        <option value="NL">Netherlands</option>
-        <option value="AT">Austria</option>  
+        <option value="CH" selected>Switzerland</option>  
+        <option value="US" selected>USA</option>
         </select>
     </div>
   </div>
@@ -201,21 +214,13 @@ function unpack(rows, key) {
         <select class="selectpicker" id="select_2" name="select2" data-actions-box="true">
           <option value="Chemistry & Materials">Chemistry & Materials</option>  
           <option value="Computer Technology" selected>Computer Technology</option>
-          <option value="Consumer Goods & Civil Engineering">Consumer Goods & Civil Engineering</option>  
-          <option value="Electrical & Audiovisual Technologies">Electrical & Audiovisual Technologies</option>
-          <option value="Electrical Machinery">Electrical Machinery</option>
-          <option value="Engines, Turbines, Thermal & Environmental Technologies">Engines, Turbines, Thermal & Environmental Technologies</option>
-          <option value="Information & Communication Technology">Information & Communication Technology</option>
-          <option value="Instruments">Instruments</option>
-          <option value="Machines & Mechanical Engineering">Machines & Mechanical Engineering</option>
-          <option value="Medical Technology">Medical Technology</option>
-          <option value="Pharmaceuticals & Biotechnology">Pharmaceuticals & Biotechnology</option>
-          <option value="Transport">Transport</option>
-          <option value="Semiconductors">Semiconductors</option>
+
+    
         </select>
     </div>
   </div>
 </div>
+
 
 <div id='myDiv'></div>
 

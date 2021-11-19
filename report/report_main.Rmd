@@ -102,6 +102,7 @@ knitr::include_graphics("plot2.png")
 <hr class="hr_red">
 #### **Figure 3: XXXX**
 ```{r, echo=FALSE}
+library("htmltools")
 # htmltools::includeHTML("plot3.html")
 ```
 <span style="font-size:0.8em">*Sources and notes: Own estimations of the <a href="https://www.cieb.unibas.ch" target ="blank">CIEB</a> using data on inventors stated on patents at the USPTO or EPO. The raw data is obtained from the <a href="https://www.uspto.gov/" target ="blank">USPTO</a> and the <a href=https://stats.oecd.org/index.aspx?queryid=79486# target = “_blank”>OECD</a>. The processed data shown in the plot is available on <a href="https://github.com/cieb-unibas/inventor_ethnicity" target ="blank">Github</a>.*</span>

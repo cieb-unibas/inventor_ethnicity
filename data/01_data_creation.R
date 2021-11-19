@@ -3,7 +3,7 @@
 #                 the EPO to investigate the ethnicity of inventors   #
 #                 across countries and over time.                     #
 # Authors:        Matthias Niggli/CIEB University of Basel            #
-# Last Revised:   16.11.2021                                          #
+# Last Revised:   19.11.2021                                          #
 #######################################################################
 
 ##################################################
@@ -20,6 +20,7 @@ if(substr(x = getwd(),
 
 #### Load libraries --------------------------------------------
 library("tidyverse")
+library("countrycode")
 
 #### Load inventors --------------------------------------------
 # contains 3'402'686 inventors with predicted information regarding their ethnic origin
@@ -117,6 +118,9 @@ if(length(unique(plot3_df$country)) == length(COUNTRIES)){
 #         axis.line = element_line(),
 #         axis.title = element_text(face="bold",size=10))
 
+#### Add country name
+plot3_df$country_name <- countrycode(plot3_df$country, "iso2c", "country.name.en")
+
 ##################################
 ######## Save the datasets #######
 ##################################
@@ -131,8 +135,4 @@ if(length(unique(plot3_df$country)) == length(COUNTRIES)){
 write.csv(x = plot3_df, file = "report/plot3_df.csv", row.names = FALSE)
 print("Data creation completed.")
 
-t <- read.csv("report/plot3_df.csv")
-
-t <- filter(t, country %in% c("US", "CH") & tech_group %in% c("Computer Technology", "Chemistry & Materials"))
-write.csv(t, file = "report/plot3_df.csv", row.names = FALSE)
 

@@ -25,17 +25,20 @@ function unpack(rows, key) {
         return rows.map(function(row) { return row[key]; });
     }
 
+
+
 var     allTech = unpack(rows, 'country'),
         pat_value = unpack(rows, 'share'),
         filing = unpack(rows, 'p_year'),
         variable = unpack(rows, 'tech_group'),
-    //    ctry_name = unpack(rows, 'country'),
+       ctry_name = unpack(rows, 'country'),
         currentCountry = [],
         currentpat_value = [],
         currentInv = [],
       //  currentcountryName = [];
         color_var = [];
         current_color = [];
+
 
 
     
@@ -56,7 +59,7 @@ var     allTech = unpack(rows, 'country'),
                 currentpat_value.push(pat_value[i]);
                 currentInv.push(allTech[i]);
                 currentFiling.push(filing[i]);
-                text_var.push('Country: ' +  
+                text_var.push('Country: ' + ctry_name[i] + '<br>' +  
                           'Filing: ' + filing[i] + '<br>' +
                           'Value: ' + roundToTwo(pat_value[i]*100) + '%');
 
@@ -73,14 +76,19 @@ var     allTech = unpack(rows, 'country'),
 };
 
 
-
     // Default Country Data
-    setBubblePlot(["CH", "DE", "US", "JP", "CN"], ["Computer Technology"]);
+    setBubblePlot(["US", "CH"], ["Computer Technology"]);
+
 
     function setBubblePlot(chosenCountry, chosenvar_2) {
         getCountryData(chosenCountry, chosenvar_2);
 
 
+if(chosenvar_2 == "mrna_pharma_i"){
+  var y_title = '<b>Share of mRNA in<br>pharmaceutical patent applications</b>';
+} else {
+  var y_title = '<b>Country&#39;s share in<br>total mRNA patent applications</b>';
+}
 
         var trace1 = {
             y: currentpat_value,
@@ -128,7 +136,7 @@ var layout = {
 
    xaxis: {
      fixedrange: true,
-         range: [1980, 2015],
+         range: [1985, 2015],
 
     title: '<b>Filing year</b>',
     zeroline: false,
@@ -139,7 +147,7 @@ var layout = {
   },
   yaxis: {
     fixedrange: true,
-    title: y_title,
+    title: '<b>Filing year</b>',
     showline: false,
     zeroline: false,
     tickformat: '.1%', 
@@ -168,40 +176,35 @@ function updateCountry(){
   $.each($("#select_2 option:selected" ), function() {
   var_1l.push($(this).val());  
   })
-  
- 
-
- 
- setBubblePlot(var_2l, var_1l);
+  setBubblePlot(var_2l, var_1l);
 }
     
 countrySelector.addEventListener('change', updateCountry, false);
 chosenvar_2.addEventListener('change', updateCountry, false);
-
 });    
 
 </script>
 </head>
 
-
 <body>
 <div class="showcase__section" id="bubble">
   <div id="bubbleplots">
-      <div class="plot" id="plotdiv"></div>
-      <div class="control-row">
-        <select class="selectpicker" id="select_1" name="select1" multiple="multiple" data-actions-box="true">
-        <option value="CA">Canada</option>  
-        <option value="CN" selected>China</option>  
-        <option value="FR">France</option>
+    <div class="plot" id="plotdiv"></div>
+    <div class="control-row">
+      <select class="selectpicker" id="select_1" name="select1" multiple="multiple" data-actions-box="true">
+        <option value="CH" selected>Switzerland</option>
+        <option value="US" selected>USA</option>
         <option value="DE" selected>Germany</option>
+        <option value="FR" selected>France</option>
+        <option value="CA">Canada</option>  
         <option value="GB">Great Britain</option>
         <option value="IT">Italy</option>
-        <option value="JP" selected>Japan</option>
-        <option value="KR">South Korea</option>
         <option value="ES">Spain</option>
         <option value="SE">Sweden</option>
-        <option value="CH" selected>Switzerland</option>  
-        <option value="US" selected>USA</option>
+        <option value="DK">Denmark</option>
+        <option value="NL">Netherlands</option>
+        <option value="AT">Austria</option>  
+       
         </select>
     </div>
   </div>
@@ -214,7 +217,17 @@ chosenvar_2.addEventListener('change', updateCountry, false);
         <select class="selectpicker" id="select_2" name="select2" data-actions-box="true">
           <option value="Chemistry & Materials">Chemistry & Materials</option>  
           <option value="Computer Technology" selected>Computer Technology</option>
-
+          <option value="Consumer Goods & Civil Engineering">Consumer Goods & Civil Engineering</option>  
+          <option value="Electrical & Audiovisual Technologies">Electrical & Audiovisual Technologies</option>
+          <option value="Electrical Machinery">Electrical Machinery</option>
+          <option value="Engines, Turbines, Thermal & Environmental Technologies">Engines, Turbines, Thermal & Environmental Technologies</option>
+          <option value="Information & Communication Technology">Information & Communication Technology</option>
+          <option value="Instruments">Instruments</option>
+          <option value="Machines & Mechanical Engineering">Machines & Mechanical Engineering</option>
+          <option value="Medical Technology">Medical Technology</option>
+          <option value="Pharmaceuticals & Biotechnology">Pharmaceuticals & Biotechnology</option>
+          <option value="Transport">Transport</option>
+          <option value="Semiconductors">Semiconductors</option>
     
         </select>
     </div>

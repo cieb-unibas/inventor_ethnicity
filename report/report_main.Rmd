@@ -57,7 +57,11 @@ output:
 
 <br>
 
-[TEXT]
+Since 2010, around half of the Nobel Prizes in Physics, Chemistry and Medicine were awarded to researchers working at research institutions in the USA. This clearly makes the USA the leading hub for academic research in the world. But it had help from abroad to get there: Around 40\% of U.S.-based Nobel prize winners in this time window were *not* born in the USA. This means the country benefited from a substantial <a href=https://en.wikipedia.org/wiki/Human_capital_flight#Brain_gain target = “_blank”>brain gain</a> of researchers from other countries (who often immigrate already as PhD students or post-Doc’s, see e.g. <a href =https://direct.mit.edu/rest/article-abstract/95/2/698/58091/Chinese-Graduate-Students-and-U-S-Scientific target = “_blank”>Ganguli and Piacentini, 2013 </a>; <a href=https://www.science.org/doi/full/10.1126/science.321.5886.185 target = “_blank”>Mervis, 2008</a> or <a href=<a href =https://direct.mit.edu/rest/article-https://www.science.org/doi/abs/10.1126/science.285.5431.1213 =“_blank”>Levin and Stephan, 1999</a>). 
+
+<br>
+
+This brain gain for the USA is not restricted to academia. It can also be seen when looking at the ethnic composition of patent inventors. Traditionally, patenting in the USA was strongly dominated by inventors of Anglo-Saxon and—although to a (much) smaller extent—continental European origins. In recent times, this has no longer been the case to the same extent. This trend is relatively well documented for the USA, where especially the share of inventors with Chinese, Indian and other non-western backgrounds have strongly increased since the 1990s. As a result, a substantial fraction of today’s U.S.-based inventors is not of the dominant Anglo-Saxon origin anymore (see <a href=https://www.hbs.edu/ris/Publication%20Files/Kerr%20WP08_EthMatch_f657d992-cf76-4b76-8b52-61cac126b5a8.pdf target = “_blank”>Kerr, 2008</a> for a seminal analysis of the ethnic composition of inventors in the USA). But did this trend also emerge in other high-income countries, especially in Western Europe? We can investigate this question using a deep learning algorithm that classifies patent inventors’ ethnic origins based on their names (interested readers can get more information on the methodological details here). This allows us to examine the ethnic composition of inventors beyond the USA and for a long period of time. The results are plotted in Figure 1.
 
 <!-- METHODOLOGY BOX / LINK TO PAPER -->
 <!-- <details> -->
@@ -70,26 +74,48 @@ output:
 <hr class="hr_red">
 #### **Figure 1: XXXX*
 ```{r, echo=FALSE}
-knitr::include_graphics("plot1.png")
-```
-<span style="font-size:0.8em">*Sources and notes: Graph taken from <a href="https://www.aeaweb.org/articles?id=10.1257/jep.30.4.83" target ="blank">Kerr et al. (2016)</a> based on data from the <a href="https://www.wipo.int/publications/en/details.jsp?id=3952&plang=EN" target ="blank">World Intellectual Property Organization WIPO</a>*</span>
-
-<br>
-
-[TEXT]
-
-<br>
-
-<hr class="hr_red">
-#### **Figure 2: XXXX**
-```{r, echo=FALSE}
 knitr::include_graphics("plot2.png")
 ```
 <span style="font-size:0.8em">*Sources and notes: Own estimations of the <a href="https://www.cieb.unibas.ch" target ="blank">CIEB</a> using data on inventors stated on patents at the USPTO or EPO. The raw data is obtained from the <a href="https://www.uspto.gov/" target ="blank">USPTO</a> and the <a href=https://stats.oecd.org/index.aspx?queryid=79486# target = “_blank”>OECD</a>.*</span>
 
 <br>
 
-[TEXT]
+The main take-away is a remarkable difference between North American and European countries, with the United Kingdom and the Netherlands somewhere in between. Similar to the USA, Canada has also witnessed a stark increase of the prevalence of non-western inventors (although the absolute numbers are on a much smaller level). But most continental European countries look rather different. For example, France has experienced a significant increase of Arabic inventors, but all other non-western ethnic groups remained on relatively low levels. In Germany, the prevalence of inventors with Turkish or Slavic-Russian origins has somewhat increased. Similarly, slight increases for some non-western ethnic groups can also be found in Switzerland, Sweden, Austria and Denmark. However, in all these continental European countries, the increasing prevalence of non-western origin inventors is on a much lower level compared to the USA . The contrast is even more pronounced in southern European countries like Italy and Spain.
+
+<br>
+
+Another interesting aspect are differences across technological fields, which highlight where inventors with non-western origins have predominantly gone. Figure 2 illustrates this for 13 broad technological areas that can be chosen at will.
+
+<hr class="hr_red">
+#### **Figure 2: XXXX**
+```{r, echo=FALSE}
+library("htmltools")
+htmltools::includeHTML("plot3.html")
+```
+<span style="font-size:0.8em">*Sources and notes: Own estimations of the <a href="https://www.cieb.unibas.ch" target ="blank">CIEB</a> using data on inventors stated on patents at the USPTO or EPO. The raw data is obtained from the <a href="https://www.uspto.gov/" target ="blank">USPTO</a> and the <a href=https://stats.oecd.org/index.aspx?queryid=79486# target = “_blank”>OECD</a>. The processed data shown in the plot is available on <a href="https://github.com/cieb-unibas/inventor_ethnicity" target ="blank">Github</a>.*</span>
+
+<br>
+
+It becomes immediately clear that there is substantial heterogeneity across technological fields. In the USA, the prevalence of non-western inventors is much higher in emerging high-technology fields such as Computer Technology or Information and Communication Technologies. In turn, the same pattern cannot be observed in European countries, where such technology fields generally do not have a substantially higher prevalence of non-western inventors. This suggests that the large increase of non-western inventors in the USA has been much more directed towards emerging high-technology fields compared to European countries.
+
+<br>
+
+The question is then whether these trends should be a cause of concern for European policy makers. There is no final answer to this, but researchers have shown that immigration and diversity can influence innovative activity and growth through several channels. 
+
+<br>
+
+Why do we oberseve these differences between North America and Europe? First of all, one could say the USA is generally a more diverse country and this is the main reason for it. However, it can be easily shown that this is not the case and migration was a key factor. One reason for this is that the USA has experienced a massive inflow of foreign origin inventors over the past decades. This is highlighted in the graph below, which is taken from a paper by <a href=https://www.aeaweb.org/articles?id=10.1257/jep.30.4.83 target=”_blank”>Pekkala Kerr, Kerr, Özden and Parsons (2016)</a>. Between 2000 and 2010, the USA has been by far the largest net receiving country of migrating inventors. 
+
+<hr class="hr_red">
+#### **Figure 3: XXXX**
+```{r, echo=FALSE}
+knitr::include_graphics("plot1.png")
+```
+<span style="font-size:0.8em">*Sources and notes: Graph taken from <a href="https://www.aeaweb.org/articles?id=10.1257/jep.30.4.83" target ="blank">Kerr et al. (2016)</a> based on data from the <a href="https://www.wipo.int/publications/en/details.jsp?id=3952&plang=EN" target ="blank">World Intellectual Property Organization WIPO</a>*</span>
+
+<br>
+
+Some likely reasons that all contribute to the differences between continental European countries, Canada and the USA are the English language as a *lingua franca* (e.g. <a href=https://ftp.iza.org/dp1782.pdf target=”_blank”>Chiswick, 2005</a>), the access to and attractiveness of universities (e.g. <a href= https://direct.mit.edu/rest/article-abstract/95/1/109/58045/Quotas-and-Quality-The-Effect-of-H-1B-Visa target=”_blank”>Kato and Sparber, 2013</a>), tax incentives (<a href=https://www.aeaweb.org/articles?id=10.1257/aer.20150237 target=”_blank”> Akcigit, Baslandze and Stantcheva, 2016</a>), and immigration policies (e.g. <a href= https://www.journals.uchicago.edu/doi/full/10.1086/705637 target=”_blank”>Kerr, 2020</a>). 
 
 <!-- HIGHLIGHT -->
 <!-- <div class=bloc_div> -->
@@ -98,18 +124,6 @@ knitr::include_graphics("plot2.png")
 <!-- <br> -->
 
 <br>
-
-<hr class="hr_red">
-#### **Figure 3: XXXX**
-```{r, echo=FALSE}
-library("htmltools")
-# htmltools::includeHTML("plot3.html")
-```
-<span style="font-size:0.8em">*Sources and notes: Own estimations of the <a href="https://www.cieb.unibas.ch" target ="blank">CIEB</a> using data on inventors stated on patents at the USPTO or EPO. The raw data is obtained from the <a href="https://www.uspto.gov/" target ="blank">USPTO</a> and the <a href=https://stats.oecd.org/index.aspx?queryid=79486# target = “_blank”>OECD</a>. The processed data shown in the plot is available on <a href="https://github.com/cieb-unibas/inventor_ethnicity" target ="blank">Github</a>.*</span>
-
-<br>
-
-[TEXT]
 
 <!-- ADAPT when posted on Social Media -->
 <!-- <br> -->

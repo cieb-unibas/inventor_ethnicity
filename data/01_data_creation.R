@@ -3,7 +3,7 @@
 #                 the EPO to investigate the ethnicity of inventors   #
 #                 across countries and over time.                     #
 # Authors:        Matthias Niggli/CIEB University of Basel            #
-# Last Revised:   19.11.2021                                          #
+# Last Revised:   25.11.2021                                          #
 #######################################################################
 
 ##################################################
@@ -46,31 +46,34 @@ inv_dat <- merge(inv_dat, techfield_grouping, by = "tech_field", all.x = TRUE)
 source("data/02_data_creation_funs.R")
 
 #############################################################################
-######## Figure 2: Non-Western Origin Shares in Western countries ###########
+######## Figure 1: Non-Western Origin Shares in Western countries ###########
 #############################################################################
 
 #### specify parameters
 COUNTRIES <- c("US", "CA", 
                "CH",
                "GB", "FR", "DE", "IT", 
-               "ES", "NL", "SE", "DK", "AT"#, "BE"
+               "ES", "NL", "SE", "DK", "AT"
                )
 NON_WESTERN_ORIGIN <- c("China", "India", "Slavic-Russian",
                         "Arabic", "Persian", "Turkey", "SouthEastAsia")
 
 #### create the data for plotting
-plot2_df <- foreign_shares_fun(COUNTRIES, 
+plot1_df <- foreign_shares_fun(COUNTRIES, 
                                NON_WESTERN_ORIGIN, 
                                START_YEAR = 1985, END_YEAR = 2015)
 
 #### test/sanity check:
-if(length(unique(plot2_df$country)) == length(COUNTRIES)){
+if(length(unique(plot1_df$country)) == length(COUNTRIES)){
   print("Data for Figure 2 successfully created")}else{
     warning("Number of countries in the created data does not correspond to function input.")}
 
+#### Add country name
+plot2_df$country_name <- countrycode(plot2_df$country, "iso2c", "country.name.en")
+
 #### visualize the data
-ggplot(plot2_df, aes(x = p_year, y = share, color = origin))+
-  facet_wrap(.~ country)+
+ggplot(plot1_df, aes(x = p_year, y = share, color = origin))+
+  facet_wrap(.~ country_name)+
   geom_line()+
   labs(x = "Year", y = "Shares of Non-Western Ethnic Origins", color = "", shape = "")+
   scale_y_continuous(labels = scales::percent, limits = c(0, 0.125))+
@@ -79,60 +82,61 @@ ggplot(plot2_df, aes(x = p_year, y = share, color = origin))+
         legend.position = "bottom",
         axis.line = element_line(),
         axis.title = element_text(face="bold",size=10))
-ggsave("report/plot2.png")
-plot2_df <- NULL
+# ggsave("report/plot1.png")
+# plot1_df <- NULL
 
 #####################################################################################################
-######## Figure 3: Non-Western Origin Shares in Technological Fields of Western countries ###########
+######## Figure 2: Non-Western Origin Shares in Technological Fields of Western countries ###########
 #####################################################################################################
 
 #### specify parameters
 COUNTRIES <- c("US", "CA",
                "CH", 
                "GB", "FR", "DE", "IT", 
-               "ES", "NL", "SE", "DK", "AT"#, "BE"
+               "ES", "NL", "SE", "DK", "AT"
                )
 NON_WESTERN_ORIGIN <- c("China", "India", "Slavic-Russian",
                         "Arabic", "Persian", "Turkey", "SouthEastAsia")
 
 #### create the data
-plot3_df <- non_western_tech(dat = inv_dat,
+plot2_df <- non_western_tech(dat = inv_dat,
                              countries = COUNTRIES, 
                              origins = NON_WESTERN_ORIGIN,
                              start_year = 1980, end_year = 2015,
                              MA5 = TRUE, min_inventors = 30, min_years = 10)
 #### test/sanity check
-if(length(unique(plot3_df$country)) == length(COUNTRIES)){
+if(length(unique(plot2_df$country)) == length(COUNTRIES)){
   print("Data for Figure 3 successfully created")}else{
     warning("Number of countries in the created data does not correspond to function input.")}
 
-#### visualize the data
-# ggplot(plot3_df, aes(x = p_year, y = share, color = country))+
-#   geom_line()+
-#   facet_wrap(.~ tech_group) +
-#   labs(x = "Year", y = "Aggregate Share of Non-Western Ethnic Origins") +
-#   scale_y_continuous(labels = scales::percent, limits = c(0, 0.4)) +
-#   theme(panel.background = element_blank(),
-#         panel.grid.major.y = element_line(linetype = "dotted", color = "grey"),
-#         legend.position = "bottom",
-#         axis.line = element_line(),
-#         axis.title = element_text(face="bold",size=10))
-
 #### Add country name
-plot3_df$country_name <- countrycode(plot3_df$country, "iso2c", "country.name.en")
+plot2_df$country_name <- countrycode(plot2_df$country, "iso2c", "country.name.en")
+
+#### visualize the data
+ggplot(plot2_df, aes(x = p_year, y = share, color = country_name))+
+  geom_line()+
+  facet_wrap(.~ tech_group) +
+  labs(x = "Year", y = "Aggregate Share of Non-Western Ethnic Origins") +
+  scale_y_continuous(labels = scales::percent, limits = c(0, 0.4)) +
+  theme(panel.background = element_blank(),
+        panel.grid.major.y = element_line(linetype = "dotted", color = "grey"),
+        legend.position = "bottom",
+        axis.line = element_line(),
+        axis.title = element_text(face="bold",size=10))
 
 ##################################
 ######## Save the datasets #######
 ##################################
 
-# for (i in seq(2,3)){
-#   dat_name <- paste0("plot", i, "_df")
-#   write.csv(get(dat_name), 
-#             paste0("report/", dat_name, ".csv"),
-#             row.names = FALSE)
-#   print(paste("Data for plot", i, "saved."))
-# }
-write.csv(x = plot3_df, file = "report/plot3_df.csv", row.names = FALSE)
-print("Data creation completed.")
+for (i in seq(2)){
+  dat_name <- paste0("plot", i, "_df")
+  write.csv(get(dat_name),
+            paste0("report/", dat_name, ".csv"),
+            row.names = FALSE)
+  print(paste("Data for plot", i, "saved."))
+}
+
+# write.csv(x = plot2_df, file = "report/plot2_df.csv", row.names = FALSE)
+# print("Data creation completed.")
 
 

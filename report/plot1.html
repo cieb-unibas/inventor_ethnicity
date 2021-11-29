@@ -2,7 +2,6 @@
   <meta charset="utf-8">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/css/bootstrap-select.min.css">
-  
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/js/bootstrap-select.min.js"></script>
@@ -14,63 +13,109 @@
   <script src= "https://d3js.org/d3-scale-chromatic.v1.min.js"></script>  
   <link rel="stylesheet" href="style.css" type="text/css" />
 
- <!-- DEFINE THE INTERACTIVE PLOT  -->
 <script>
-
 // CREATE WITH PLOTLY ACCORDING TO: https://plotly.com/javascript/subplots/
+
+function roundToTwo(num) {    
+    return +(Math.round(num + "e+1")  + "e-1");
+}
+
+// READ IN THE DATA
+Plotly.d3.csv("https://raw.githubusercontent.com/cieb-unibas/inventor_ethnicity/main/report/plot1_df.csv", function(err, rows){
+  function unpack(rows, key) {
+        return rows.map(function(row) { return row[key]; });
+    }
+    
+// DEFINE VARIABLES FOR PLOTTING
+  var country = unpack(rows, 'country'),
+      year = unpack(rows, 'p_year'),
+      share = unpack(rows, 'share'),
+      country_name = unpack(rows, 'country_name'),
+      origin = unpack(rows, 'origin'),
+      country_rank = unpack(rows('country_id'));
+
+
+// DEFINE A FUNCTION TO EXTRACT THE DATA FOR A GIVEN COUNTRY 
+  function getCountryData(geo){
+    plot_years = [];
+    plot_share = [];
+    plot_origins = [];
+    text_var = [];
+    
+    for (var i = 0 ; i < country.length ; i++){
+      if(country[i] === geo){
+        plot_years.push(year[i]);
+        plot_share.push(share[i]);
+        plot_origins.push(origin[i])
+        text_var.push('Country: ' + country_name[i] + '<br>' +  
+                          'Year: ' + year[i] + '<br>' +
+                          'Share: ' + roundToTwo(share[i] * 100) + '%');
+      }
+    }
+  };
+  
+// DEFINE THE SUBPLOTS
+  getCountryData('US'); // get the data for the USA => DOES NOT WORK
+  var trace1 = {
+            y: plot_share,
+            x: plot_years,
+            customdata: text_var,
+            type: 'scatter',
+            mode: 'lines+markers',
+            hovertemplate:  '%{customdata}' + '<extra></extra>',
+            transforms: [{type: 'groupby', 
+                          groups: plot_origins,
+                          styles: [
+                          {target: 'Turkey', value: {marker: {color: d3.interpolateViridis(0.)}}},
+                          {target: 'India', value: {marker: {color: d3.interpolateViridis(0.15)}}},
+                          {target: 'Slavic-Russian', value: {marker: {color: d3.interpolateViridis(0.3)}}},
+                          {target: 'China', value: {marker: {color: d3.interpolateViridis(0.45)}}},
+                          {target: 'Persian', value: {marker: {color: d3.interpolateViridis(0.6)}}},
+                          {target: 'SouthEastAsia', value: {marker: {color: d3.interpolateViridis(0.8)}}},
+                          {target: 'Arabic', value: {marker: {color: d3.interpolateViridis(1)}}}
+                          ]
+              }],
+  };
+  
+  getCountryData('CH');
+  var trace2 = {
+            y: plot_share,
+            x: plot_years,
+            xaxis: 'x2',
+            yaxis: 'y2',
+            customdata: text_var,
+            type: 'scatter',
+            mode: 'lines+markers',
+            hovertemplate:  '%{customdata}' + '<extra></extra>',
+            transforms: [{type: 'groupby', 
+                          groups: plot_origins,
+                          styles: [
+                          {target: 'Turkey', value: {marker: {color: d3.interpolateViridis(0.7)}}},
+                          {target: 'India', value: {marker: {color: d3.interpolateViridis(0)}}},
+                          {target: 'Slavic-Russian', value: {marker: {color: d3.interpolateViridis(0.1)}}},
+                          {target: 'China', value: {marker: {color: d3.interpolateViridis(0.65)}}},
+                          {target: 'Persian', value: {marker: {color: d3.interpolateViridis(0.3)}}},
+                          {target: 'SouthEastAsia', value: {marker: {color: d3.interpolateViridis(0.2)}}},
+                          {target: 'Arabic', value: {marker: {color: d3.interpolateViridis(0.4)}}}
+                          ]
+              }],
+  };
+
+  var data = [trace1, trace2]; // DEFINE THE DATA
+  
+  var layout = {
+    grid: {rows: 1, columns: 2, pattern: 'independent'},
+  };
+  
+  Plotly.newPlot('myDiv', data, layout);
+  
+};
 
 </script>
 </head>
 
-<!-- DEFINE WHAT IS DISPLAYED ON THE WEBPAGE -->
-<body>
-<div class="showcase__section" id="bubble">
-  <div id="bubbleplots">
-    <div class="plot" id="plotdiv"></div>
-    <div class="control-row">
-      <select class="selectpicker" id="select_1" name="select1" multiple="multiple" data-actions-box="true">
-        <option value="AT">Austria</option>  
-        <option value="CA">Canada</option>  
-        <option value="DK">Denmark</option>
-        <option value="FR">France</option>
-        <option value="GB">Great Britain</option>
-        <option value="DE">Germany</option>
-        <option value="IT">Italy</option>
-        <option value="NL">Netherlands</option>
-        <option value="ES">Spain</option>
-        <option value="SE">Sweden</option>
-        <option value="CH" selected>Switzerland</option>
-        <option value="US" selected>USA</option>
-        </select>
-    </div>
-  </div>
-</div>
-
-<div class="showcase__section" id="bubble">
-  <div id="bubbleplots">
-      <div class="plot" id="plotdiv"></div>
-      <div class="control-row">
-        <select class="selectpicker" id="select_2" name="select2" data-actions-box="true">
-          <option value="Chemistry & Materials">Chemistry & Materials</option>  
-          <option value="Computer Technology" selected>Computer Technology</option>
-          <option value="Consumer Goods & Civil Engineering">Consumer Goods & Civil Engineering</option>  
-          <option value="Electrical & Audiovisual Technologies">Electrical & Audiovisual Technologies</option>
-          <option value="Electrical Machinery">Electrical Machinery</option>
-          <option value="Engines, Turbines, Thermal & Environmental Technologies">Engines, Turbines, Thermal & Environmental Technologies</option>
-          <option value="Information & Communication Technology">Information & Communication Technology</option>
-          <option value="Instruments">Instruments</option>
-          <option value="Machines & Mechanical Engineering">Machines & Mechanical Engineering</option>
-          <option value="Medical Technology">Medical Technology</option>
-          <option value="Pharmaceuticals & Biotechnology">Pharmaceuticals & Biotechnology</option>
-          <option value="Transport">Transport</option>
-          <option value="Semiconductors">Semiconductors</option>
-        </select>
-    </div>
-  </div>
-</div>
-
-
+<!-- DISPLAY THE PLOT -->
+</body>
 <div id='myDiv'></div>
-
 </body>
     

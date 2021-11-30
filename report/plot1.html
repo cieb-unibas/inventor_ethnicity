@@ -14,7 +14,6 @@
   <link rel="stylesheet" href="style.css" type="text/css" />
 
 <script>
-// CREATE WITH PLOTLY ACCORDING TO: https://plotly.com/javascript/subplots/
 
 function roundToTwo(num) {    
     return +(Math.round(num + "e+1")  + "e-1");
@@ -23,16 +22,15 @@ function roundToTwo(num) {
 // READ IN THE DATA
 Plotly.d3.csv("https://raw.githubusercontent.com/cieb-unibas/inventor_ethnicity/main/report/plot1_df.csv", function(err, rows){
   function unpack(rows, key) {
-        return rows.map(function(row) { return row[key]; });
+        return rows.map(function(row) {return row[key];});
     }
     
 // DEFINE VARIABLES FOR PLOTTING
   var country = unpack(rows, 'country'),
       year = unpack(rows, 'p_year'),
       share = unpack(rows, 'share'),
-      country_name = unpack(rows, 'country_name'),
-      origin = unpack(rows, 'origin'),
-      country_rank = unpack(rows('country_id'));
+      //country_name = unpack(rows, 'country_name'),
+      origins = unpack(rows, 'origin');
 
 
 // DEFINE A FUNCTION TO EXTRACT THE DATA FOR A GIVEN COUNTRY 
@@ -46,8 +44,8 @@ Plotly.d3.csv("https://raw.githubusercontent.com/cieb-unibas/inventor_ethnicity/
       if(country[i] === geo){
         plot_years.push(year[i]);
         plot_share.push(share[i]);
-        plot_origins.push(origin[i])
-        text_var.push('Country: ' + country_name[i] + '<br>' +  
+        plot_origins.push(origins[i])
+        text_var.push('Origin: ' + plot_origins[i] + '<br>' +  
                           'Year: ' + year[i] + '<br>' +
                           'Share: ' + roundToTwo(share[i] * 100) + '%');
       }
@@ -55,61 +53,171 @@ Plotly.d3.csv("https://raw.githubusercontent.com/cieb-unibas/inventor_ethnicity/
   };
   
 // DEFINE THE SUBPLOTS
-  getCountryData('US'); // get the data for the USA => DOES NOT WORK
+  getCountryData('US'); // get the data
   var trace1 = {
-            y: plot_share,
-            x: plot_years,
-            customdata: text_var,
-            type: 'scatter',
-            mode: 'lines+markers',
-            hovertemplate:  '%{customdata}' + '<extra></extra>',
-            transforms: [{type: 'groupby', 
-                          groups: plot_origins,
-                          styles: [
-                          {target: 'Turkey', value: {marker: {color: d3.interpolateViridis(0.)}}},
-                          {target: 'India', value: {marker: {color: d3.interpolateViridis(0.15)}}},
-                          {target: 'Slavic-Russian', value: {marker: {color: d3.interpolateViridis(0.3)}}},
-                          {target: 'China', value: {marker: {color: d3.interpolateViridis(0.45)}}},
-                          {target: 'Persian', value: {marker: {color: d3.interpolateViridis(0.6)}}},
-                          {target: 'SouthEastAsia', value: {marker: {color: d3.interpolateViridis(0.8)}}},
-                          {target: 'Arabic', value: {marker: {color: d3.interpolateViridis(1)}}}
-                          ]
-              }],
+    y: plot_share,
+    x: plot_years,
+    xaxis: 'x',
+    yaxis: 'y',
+    type: 'scatter',
+    mode: 'markers', // lines+markers',
+    name: 'Ethnic Origin',
+    visible: true,
+    legendgroup: 'group',
+    customdata: text_var,
+    hovertemplate:  '%{customdata}' + '<extra></extra>',
+    transforms: [{type: 'groupby', 
+      groups: plot_origins,
+      styles: [
+        {target: 'Turkey', value: {marker: {color: d3.interpolateViridis(0.)}}},
+        {target: 'India', value: {marker: {color: d3.interpolateViridis(0.15)}}},
+        {target: 'Slavic-Russian', value: {marker: {color: d3.interpolateViridis(0.3)}}},
+        {target: 'China', value: {marker: {color: d3.interpolateViridis(0.45)}}},
+        {target: 'Persian', value: {marker: {color: d3.interpolateViridis(0.6)}}},
+        {target: 'SouthEastAsia', value: {marker: {color: d3.interpolateViridis(0.8)}}},
+        {target: 'Arabic', value: {marker: {color: d3.interpolateViridis(1)}}}
+      ]
+    }],
   };
   
   getCountryData('CH');
   var trace2 = {
-            y: plot_share,
-            x: plot_years,
-            xaxis: 'x2',
-            yaxis: 'y2',
-            customdata: text_var,
-            type: 'scatter',
-            mode: 'lines+markers',
-            hovertemplate:  '%{customdata}' + '<extra></extra>',
-            transforms: [{type: 'groupby', 
-                          groups: plot_origins,
-                          styles: [
-                          {target: 'Turkey', value: {marker: {color: d3.interpolateViridis(0.7)}}},
-                          {target: 'India', value: {marker: {color: d3.interpolateViridis(0)}}},
-                          {target: 'Slavic-Russian', value: {marker: {color: d3.interpolateViridis(0.1)}}},
-                          {target: 'China', value: {marker: {color: d3.interpolateViridis(0.65)}}},
-                          {target: 'Persian', value: {marker: {color: d3.interpolateViridis(0.3)}}},
-                          {target: 'SouthEastAsia', value: {marker: {color: d3.interpolateViridis(0.2)}}},
-                          {target: 'Arabic', value: {marker: {color: d3.interpolateViridis(0.4)}}}
-                          ]
-              }],
+    y: plot_share,
+    x: plot_years,
+    xaxis: 'x2',
+    yaxis: 'y2',
+    type: 'scatter',
+    mode: 'markers', //'lines+markers',
+    name: '',
+    customdata: text_var,
+    showlegend: false,
+    hovertemplate:  '%{customdata}' + '<extra></extra>',
+    transforms: [{type: 'groupby',
+      groups: plot_origins,
+      styles: [
+        {target: 'Turkey', value: {marker: {color: d3.interpolateViridis(0.)}}},
+        {target: 'India', value: {marker: {color: d3.interpolateViridis(0.15)}}},
+        {target: 'Slavic-Russian', value: {marker: {color: d3.interpolateViridis(0.3)}}},
+        {target: 'China', value: {marker: {color: d3.interpolateViridis(0.45)}}},
+        {target: 'Persian', value: {marker: {color: d3.interpolateViridis(0.6)}}},
+        {target: 'SouthEastAsia', value: {marker: {color: d3.interpolateViridis(0.8)}}},
+        {target: 'Arabic', value: {marker: {color: d3.interpolateViridis(1)}}}
+      ]
+    }],
   };
 
-  var data = [trace1, trace2]; // DEFINE THE DATA
-  
-  var layout = {
-    grid: {rows: 1, columns: 2, pattern: 'independent'},
+  getCountryData('DE');
+  var trace3 = {
+    y: plot_share,
+    x: plot_years,
+    xaxis: 'x3',
+    yaxis: 'y3',
+    type: 'scatter',
+    mode: 'markers', //'lines+markers',
+    name: '',
+    customdata: text_var,
+    showlegend: false,
+    hovertemplate:  '%{customdata}' + '<extra></extra>',
+    transforms: [{type: 'groupby',
+      groups: plot_origins,
+      styles: [
+        {target: 'Turkey', value: {marker: {color: d3.interpolateViridis(0.)}}},
+        {target: 'India', value: {marker: {color: d3.interpolateViridis(0.15)}}},
+        {target: 'Slavic-Russian', value: {marker: {color: d3.interpolateViridis(0.3)}}},
+        {target: 'China', value: {marker: {color: d3.interpolateViridis(0.45)}}},
+        {target: 'Persian', value: {marker: {color: d3.interpolateViridis(0.6)}}},
+        {target: 'SouthEastAsia', value: {marker: {color: d3.interpolateViridis(0.8)}}},
+        {target: 'Arabic', value: {marker: {color: d3.interpolateViridis(1)}}}
+      ]
+    }],
   };
+
+  var data = [trace1, trace2, trace3]; // DEFINE THE DATA
   
-  Plotly.newPlot('myDiv', data, layout);
+  //var layout = {grid: {rows: 1, columns: 2, pattern: 'independent'},}; //works
+
+  var layout = {
+    grid: {
+      rows: 1, 
+      columns: 3, 
+      pattern: 'indipendent'},
+    showlegend: true,
+    legend: {
+      orientation: 'h',
+      xanchor:'center',
+      yanchor:"top",
+		  x: 0.5,
+		  y: -0.2,
+		  traceorder:'normal'
+    },
+    scrollZoom: false,
+    autosize: true,
+    hovermode: "closest",
+      margin: {
+      l: 100,
+      r: 10,
+      b: 100,
+      t: 20
+    },
+    xaxis: {
+      fixedrange: true,
+      tickvals: [1985, 1995, 2005, 2015],
+      title: '<b>Year</b>',
+      zeroline: false,
+      ticks: 'inside',
+      showgrid: true
+    },
+    yaxis: {
+      fixedrange: true,
+      range: [0, 0.15],
+      tickvals: [0, 0.04, 0.08, 0.12],
+      title: '<b>Prevalence of Inventors with<br>Non-Western Ethnic Origins</b>',
+      zeroline: false,
+      ticks: 'inside',
+      tickformat: '.1%',
+      showgrid: true
+    },
+    xaxis2: {
+      fixedrange: true,
+      tickvals: [1985, 1995, 2005, 2015],
+      title: '<b>Year</b>',
+      zeroline: false,
+      ticks: 'inside',
+      showgrid: true
+    },
+    yaxis2: {
+      fixedrange: true,
+      range: [0, 0.15],
+      tickvals: [0, 0.04, 0.08, 0.12],
+      title: '<b>Prevalence of Inventors with<br>Non-Western Ethnic Origins</b>',
+      zeroline: false,
+      ticks: 'inside',
+      tickformat: '.1%',
+      showgrid: true
+    },
+    xaxis3: {
+      fixedrange: true,
+      tickvals: [1985, 1995, 2005, 2015],
+      title: '<b>Year</b>',
+      zeroline: false,
+      ticks: 'inside',
+      showgrid: true
+    },
+    yaxis3: {
+      fixedrange: true,
+      range: [0, 0.15],
+      tickvals: [0, 0.04, 0.08, 0.12],
+      title: '<b>Prevalence of Inventors with<br>Non-Western Ethnic Origins</b>',
+      zeroline: false,
+      ticks: 'inside',
+      tickformat: '.1%',
+      showgrid: true
+    },
+  };
+
+  Plotly.newPlot('myDiv', data, layout, {displayModeBar: false});
   
-};
+});
 
 </script>
 </head>

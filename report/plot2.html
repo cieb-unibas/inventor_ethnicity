@@ -63,7 +63,7 @@ function unpack(rows, key) {
 
 
 // DEFAULT SELECTIONS FOR THE PLOT
-  setBubblePlot(["US", "CH"], ["Computer Technology"]);
+  setBubblePlot(["US", "CH", "DE"], ["Information & Communication Technology"]);
 
 // DEFINE THE PLOT FOR THE SELECTED TECH_GROUP AND COUNTRIES
  function setBubblePlot(chosenCountry, chosenvar_2) {
@@ -186,7 +186,7 @@ Plotly.newPlot('myDiv', data, layout, {displayModeBar: false});
         <option value="DK">Denmark</option>
         <option value="FR">France</option>
         <option value="GB">Great Britain</option>
-        <option value="DE">Germany</option>
+        <option value="DE" selected>Germany</option>
         <option value="IT">Italy</option>
         <option value="NL">Netherlands</option>
         <option value="ES">Spain</option>
@@ -204,12 +204,12 @@ Plotly.newPlot('myDiv', data, layout, {displayModeBar: false});
       <div class="control-row">
         <select class="selectpicker" id="select_2" name="select2" data-actions-box="true">
           <option value="Chemistry & Materials">Chemistry & Materials</option>  
-          <option value="Computer Technology" selected>Computer Technology</option>
+          <option value="Computer Technology">Computer Technology</option>
           <option value="Consumer Goods & Civil Engineering">Consumer Goods & Civil Engineering</option>  
           <option value="Electrical & Audiovisual Technologies">Electrical & Audiovisual Technologies</option>
           <option value="Electrical Machinery">Electrical Machinery</option>
           <option value="Engines, Turbines, Thermal & Environmental Technologies">Engines, Turbines, Thermal & Environmental Technologies</option>
-          <option value="Information & Communication Technology">Information & Communication Technology</option>
+          <option value="Information & Communication Technology" selected>Information & Communication Technology</option>
           <option value="Instruments">Instruments</option>
           <option value="Machines & Mechanical Engineering">Machines & Mechanical Engineering</option>
           <option value="Medical Technology">Medical Technology</option>

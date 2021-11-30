@@ -28,12 +28,21 @@ output:
 <meta property='og:url' content='https://innoscape.ch/en/publications/XXXXX'/>
 </head>
 
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+# Load packages
+library("ggplot2")
+library("viridis")
+library("dplyr")
+library("plotly")
+```
+
 <!-- START with text -->
 
-### **TITLE**
+### **Mind The Gap: Non-Western Origin Inventors in the USA and Europe**
 
 <p style="text-align: left; line-height: 100%;">
-*December 2021* by <a href="#" data-placement="bottom" data-toggle="tooltip"  data-html="true" title="<img src='https://innoscape.de/authors/mn2018.jpg'><b>Matthias Niggli</b> is a project collaborator. He has a background in public policy from previous positions at the Swiss Federal Institute of Intellectual Property (IPI) and the Swiss State Secretariat for Economic Affairs (SECO). He has a special interest in experimenting with all kinds of machine-learning methods and is enthusiastic about discovering novel approaches to visualize data. 
+*December 2021* by <a href="#" data-placement="bottom" data-toggle="tooltip"  data-html="true" title="<img src='https://innoscape.de/authors/mn2018.jpg'><b>Matthias Niggli</b> is a research data scientist, economist and project collaborator. He holds a PhD in economics from the University of Basel and has a background in public policy from previous positions in the public sector. Matthias has a special interest in experimenting with all kinds of machine-learning methods and is enthusiastic about discovering novel approaches to visualize data. 
 <br> 
 <a href='https://www.linkedin.com/in/matthias-niggli-b47b33119' target = “_blank”>LinkedIn</a> 
 <br>
@@ -46,22 +55,26 @@ output:
 
 
 <!-- TITLE PICTURE -->
-<!-- ![](XXXXX.jpg){width=100%}  -->
-<!-- <a href="XXXXX" target = "_blank">XXXXX</a>  -->
+![](title_picture.jpg){width=100%}
+<a href="https://unsplash.com/photos/MiVrRlSe4BI" target="_blank">Ellis Island, United States in 1910 | The New York Public Library</a>
 
 
 <br>
 
 <!-- TEASER ABSTRACT -->
-**[Teaser/Abstract]**  
+**Inventors with non-western ethnic backgrounds have tremendously increased in the USA and contribute significantly to its inventive capacity. This is lacking in continental European countries that have been lagging behind in the global race for talents.**
 
 <br>
 
-Since 2010, around half of the Nobel Prizes in Physics, Chemistry and Medicine were awarded to researchers working at research institutions in the USA. This clearly makes the USA the leading hub for academic research in the world. But it had help from abroad to get there: Around 40\% of U.S.-based Nobel prize winners in this time window were *not* born in the USA. This means the country benefited from a substantial <a href=https://en.wikipedia.org/wiki/Human_capital_flight#Brain_gain target = “_blank”>brain gain</a> of researchers from other countries (who often immigrate already as PhD students or post-Doc’s, see e.g. <a href =https://direct.mit.edu/rest/article-abstract/95/2/698/58091/Chinese-Graduate-Students-and-U-S-Scientific target = “_blank”>Ganguli and Piacentini, 2013 </a>; <a href=https://www.science.org/doi/full/10.1126/science.321.5886.185 target = “_blank”>Mervis, 2008</a> or <a href=https://direct.mit.edu/rest/article-https://www.science.org/doi/abs/10.1126/science.285.5431.1213 target=“_blank”>Levin and Stephan, 1999</a>).
+Since 2010, around half of the Nobel Prizes in Physics, Chemistry and Medicine were awarded to researchers working at U.S. institutions. At the same time, around 40\% of these prize winners were *not* born in the USA. This highlights that the USA also had important help from abroad to obtain its remarkable position. The country benefits substantially from a <a href=https://en.wikipedia.org/wiki/Human_capital_flight#Brain_gain target = “_blank”>*Brain Gain*</a> of foreign talents who often immigrated already as students or aspiring young researchers (see e.g. <a href =https://direct.mit.edu/rest/article-abstract/95/2/698/58091/Chinese-Graduate-Students-and-U-S-Scientific target = “_blank”>Ganguli and Piacentini, 2013</a>; <a href=https://www.science.org/doi/full/10.1126/science.321.5886.185 target = “_blank”>Mervis, 2008</a> or <a href=https://direct.mit.edu/rest/article-https://www.science.org/doi/abs/10.1126/science.285.5431.1213 target=“_blank”>Levin and Stephan, 1999</a>). 
 
 <br>
 
-This brain gain for the USA is not restricted to academia. It can also be seen when looking at the ethnic composition of patent inventors. Traditionally, patenting in the USA was strongly dominated by inventors of Anglo-Saxon and—although to a (much) smaller extent—continental European origins. In recent times, this has no longer been the case to the same extent. Especially the share of inventors with Chinese, Indian and other non-western backgrounds has strongly increased since the 1990s and as a result, a substantial fraction of today’s U.S.-based inventors is not of the dominant Anglo-Saxon origin anymore (see <a href=https://www.hbs.edu/ris/Publication%20Files/Kerr%20WP08_EthMatch_f657d992-cf76-4b76-8b52-61cac126b5a8.pdf target = “_blank”>Kerr, 2008</a> for a seminal analysis of the ethnic composition of inventors in the USA). But did this trend also emerge in other high-income countries, especially in Western Europe? We can investigate this question using a deep learning algorithm that classifies patent inventors’ ethnic origins based on their names (interested readers can get more information on the methodological details here). This allows us to examine the ethnic composition of inventors beyond the USA and for a long period of time. Figure 1 plots the prevalence of inventors with different ethnic origins for 12 high-income countries.
+This brain gain for the USA is not restricted to academia. It can also be observed when looking at the ethnic composition of patent inventors. Traditionally, patenting in the USA was strongly dominated by inventors of Anglo-Saxon and—although to a (much) smaller extent—continental European ethnic origins. In recent decades, this has no longer been the case to the same extent. Especially the share of inventors with Chinese, Indian and other non-western ethnic backgrounds has strongly increased since the 1990s. Today, a substantial fraction of U.S.-based inventors is not of the dominant Anglo-Saxon origin anymore (<a href=https://www.hbs.edu/ris/Publication%20Files/Kerr%20WP08_EthMatch_f657d992-cf76-4b76-8b52-61cac126b5a8.pdf target = “_blank”>Kerr, 2008</a>). 
+
+<br>
+
+Did this trend also emerge in other high-income countries, for example in Western Europe? We can investigate this question using a deep learning algorithm that classifies patent inventors’ ethnic origins based on their names (we are happy to provide methodological details to interested readers upon request). This allows us to examine the ethnic composition of inventors beyond the USA and for a long period of time. Figure 1 plots the prevalence of inventors with different ethnic origins for 12 high-income countries.
 
 <!-- METHODOLOGY BOX / LINK TO PAPER -->
 <!-- <details> -->
@@ -72,33 +85,50 @@ This brain gain for the USA is not restricted to academia. It can also be seen w
 <br>
 
 <hr class="hr_red">
-#### **Figure 1: XXXX*
-```{r, echo=FALSE}
-knitr::include_graphics("plot1.png")
-```
-<span style="font-size:0.8em">*Sources and notes: Own estimations of the <a href="https://www.cieb.unibas.ch" target ="blank">CIEB</a> using data on inventors stated on patents at the USPTO or EPO. The raw data is obtained from the <a href="https://www.uspto.gov/" target ="blank">USPTO</a> and the <a href=https://stats.oecd.org/index.aspx?queryid=79486# target = “_blank”>OECD</a>.*</span>
+#### **Figure 1: The Prevalence of Non-Western Ethnic Inventors Is Low in Continental Europe**
+<span style="font-size:0.8em">**Prevalence of Non-Western Ethnic Origins Across Countries**</span>
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+#knitr::include_graphics("plot1.png")
 
-<br>
+plot1_df <- read.csv("plot1_df.csv")
+
+COUNTRY_ORDER <- plot1_df %>% distinct(country_name, .keep_all = TRUE) %>% 
+  select(country_name, country_id) %>% arrange(country_id) %>%.$country_name
+plot1_df$country_name <- factor(plot1_df$country_name, levels = COUNTRY_ORDER)
+
+ggplot(plot1_df, aes(x = p_year, y = share, color = origin))+
+  facet_wrap(.~ country_name)+
+  geom_line()+
+  labs(x = "Year", y = "Shares of Non-Western Ethnic Origins", color = "", shape = "")+
+  scale_y_continuous(labels = scales::percent, limits = c(0, 0.125))+
+  scale_color_viridis(discrete = TRUE, begin = 0.1, end = 0.9)+
+  theme(panel.background = element_blank(),
+        panel.grid.major.y = element_line(linetype = "dotted", color = "grey"),
+        legend.position = "bottom",
+        axis.line = element_line(),
+        axis.title = element_text(face="bold",size=10))
+```
+<span style="font-size:0.8em">*Sources and notes: Own estimations of the <a href="https://www.cieb.unibas.ch" target ="blank">CIEB</a> using data on inventors stated on patents at the USPTO or EPO. The raw data is obtained from the <a href="https://www.uspto.gov/" target ="blank">USPTO</a> and the <a href=https://stats.oecd.org/index.aspx?queryid=79486# target = “_blank”>OECD</a>.The processed data shown in the plot is available on <a href="https://github.com/cieb-unibas/inventor_ethnicity" target ="blank">Github</a>.*</span>
 
 <!-- HIGHLIGHT -->
 <div class=bloc_div>
-<blockquote>***In continental European countries, the prevalence of non-western origin inventors is on a much lower level compared to the USA***</blockquote>
+<blockquote>***In continental Europe, the prevalence of non-western origin inventors is on a much lower level compared to the USA***</blockquote>
 </div>
 
 <br>
 
-The main take-away is a remarkable difference between North American and European countries, with the United Kingdom and the Netherlands somewhere in between. Similar to the USA, Canada has also witnessed a stark increase of the prevalence of non-western inventors (although the absolute numbers are on a much smaller level). But most continental European countries look rather different. For example, France has experienced a significant increase of Arabic inventors, but all other non-western ethnic groups remained on relatively low levels. In Germany, the prevalence of inventors with Turkish or Slavic-Russian origins has somewhat increased. Similarly, slight increases for some non-western ethnic groups can also be found in Switzerland, Sweden, Austria and Denmark. However, in all these continental European countries, the increasing prevalence of non-western origin inventors is on a much lower level compared to the USA. The contrast is even more pronounced in southern European countries like Italy and Spain.
+The main take-away from this graph is a remarkable difference between North American and European countries, with the United Kingdom and the Netherlands somewhere in between. Similar to the USA, Canada has also witnessed a stark increase of the prevalence of non-western inventors (although the absolute numbers are on a much smaller level). But most continental European countries look rather different. For example, France has experienced a significant increase of Arabic inventors, but all other non-western ethnic groups remained on low levels. In Germany, the prevalence of inventors with Turkish or Slavic-Russian origins has somewhat increased but remains rather low. Similarly, slight increases for some non-western ethnic groups can be found in Switzerland, Sweden, Austria and Denmark. However, in all these continental European countries, the prevalence of non-western origin inventors is on a much lower level compared to the USA. The contrast is even more pronounced in southern European countries like Italy and Spain. 
 
 <br>
 
-
-Another interesting aspect is to which fields and industries these non-western inventors have predominantly gone. Figure 2 illustrates the combined prevalence of the 7 ethnic origins in 13 broad technological fields for the same 12 countries.
+Another interesting finding is that non-western ethnic inventors in the USA can be found predominantly in emerging high-technology fields, such as “Information & Communication Technology” (ICT). This is illustrated in Figure 2 that shows the combined prevalence of all the considered ethnic origins across technological fields for the same countries as before.
 
 <br>
 
 <hr class="hr_red">
-#### **Figure 2: XXXX**
-```{r, echo=FALSE}
+#### **Figure 2: The USA Has the Highest Non-Western Prevalence in Emerging Technology Fields**
+<span style="font-size:0.8em">**Combined Prevalence of Non-Western Ethnic Origins Across Technologies**</span>
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
 library("htmltools")
 htmltools::includeHTML("plot2.html")
 ```
@@ -111,28 +141,44 @@ htmltools::includeHTML("plot2.html")
 <blockquote>***The vast increase of non-western inventors in the USA has been strongly directed towards emerging high-technology fields***</blockquote>
 </div>
 
-<br>
-
-It becomes immediately clear that there is substantial heterogeneity across technological fields. In the USA, the prevalence of non-western inventors is much higher in emerging high-technology fields such as Computer Technology or Information and Communication Technologies. This pattern cannot be observed in European countries, where such technology fields generally do not have a substantially higher prevalence of non-western inventors. This suggests that in contrast to European countries, the vast increase of non-western inventors in the USA has been strongly directed towards emerging high-technology fields.
+The USA has a clearly higher ethnic diversity in almost all fields compared to European countries. But there is substantial heterogeneity across technologies within the USA. Besides ICT, non-western inventors are much more prevalent in technology fields such as “Computer Technology” or “Semiconductors” compared to more traditional fields such as “Transport” or “Machines”. This pattern cannot be observed for European countries, where the prevalence is similar and rather low most technology fields. Hence, there are two main points our analysis highlights: First, the bulk of migrating non-western inventors has gone to the USA and not to continental European countries. Second, the inflow of non-western inventors in the USA has been strongly directed towards emerging high-technology fields. 
 
 <br>
 
-The natural question is whether European policymakers should be concerned because of these differences. There is no final answer to this, but researchers have shown that immigration and diversity can influence innovative activity and growth through several channels. First of all, companies consider the access to highly skilled talents when deciding on locations for their research and development activities (<a href=https://link.springer.com/article/10.1057/jibs.2008.92 target = “_blank”> Lewin, Massini and Peeters, 2009</a>) and more diverse inventor teams seem to directly enhance inventive output of firms (see <a href=https://www.sciencedirect.com/science/article/abs/pii/S0048733319300824 target = “_blank”>Ferucci and Lissoni, 2019</a> or <a href=https://link.springer.com/article/10.1007/s00148-013-0491-7 target = “_blank”>Parrotta, Pozzoli and Pytlikova, 2014</a>). More generally, immigration also fosters innovation at the country-level (see e.g., <a href=https://www.aeaweb.org/articles?id=10.1257/aer.p20171021 target = “_blank”>Akcigit, Grigsby and Nicholas, 2017</a> or <a href=https://www.nber.org/papers/w27075 target = “_blank”>Burchardi, Chaney, Hassan, Tarquinio and Terry, 2020</a> for the USA and <a href=https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3728867 target = “_blank”>Cristelli and Lissoni, 2020</a> or <a href=https://www.sciencedirect.com/science/article/abs/pii/S0048733318302737 target = “_blank”> Fassio, Montobbio, and Venturini, 2019</a> for Switzerland and European countries). Hence, there is strong evidence that immigration can contribute to a country’s innovation capabilities. The USA’s extraordinary attractiveness for inventors from all around the world could thus be an important asset that is lacking in European countries.
+The natural question arising from this is whether European policymakers should be concerned about these differences. There is no final answer, but researchers have found evidence that immigration and diversity can foster innovative activity and growth through several channels. First of all, companies consider the access to highly skilled talents when deciding on locations for their research and development activities (<a href=https://link.springer.com/article/10.1057/jibs.2008.92 target = “_blank”> Lewin, Massini and Peeters, 2009</a>) and more diverse inventor teams seem to directly enhance inventive output of firms (see <a href=https://www.sciencedirect.com/science/article/abs/pii/S0048733319300824 target = “_blank”>Ferucci and Lissoni, 2019</a> or <a href=https://link.springer.com/article/10.1007/s00148-013-0491-7 target = “_blank”>Parrotta, Pozzoli and Pytlikova, 2014</a>). More generally, there is a large literature demonstrating that immigration also spurs innovation at the country-level (see e.g., <a href=https://www.aeaweb.org/articles?id=10.1257/aer.p20171021 target = “_blank”>Akcigit, Grigsby and Nicholas, 2017</a> or <a href=https://www.nber.org/papers/w27075 target = “_blank”>Burchardi, Chaney, Hassan, Tarquinio and Terry, 2020</a> for the USA and <a href=https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3728867 target = “_blank”>Cristelli and Lissoni, 2020</a> or <a href=https://www.sciencedirect.com/science/article/abs/pii/S0048733318302737 target = “_blank”> Fassio, Montobbio, and Venturini, 2019</a> for Switzerland and European countries). Hence, there is extensive evidence that immigration can contribute to a country’s innovation capabilities. The USA’s extraordinary attractiveness for inventors from all around the world could thus be an important asset that is lacking in European countries. This should be a concern for European policymakers.
 
 <br>
 
-Why do we observe these differences between North America and Europe? One could argue that these differences simply reflect that the USA has always been an immigrant and more diverse country, and the higher prevalence of non-western inventors simply reflects this fact. Although this surely plays a role, it can be shown that actual migration was a much more important factor. Using data from the <a href="https://www.wipo.int/publications/en/details.jsp?id=3952&plang=EN" target ="blank">World Intellectual Property Organization WIPO</a>, Figure 3 highlights that the USA has experienced a vast inflow of foreign inventors over the last decades and was by far the largest net receiving country of migrating inventors.
+But why do we observe these differences between North America and Europe? One could argue that they simply reflect that the USA has always been an immigrant and ethnically diverse country. Its higher prevalence of non-western inventors could then simply reflect this fact. Although this surely plays a role, it can be shown easily that migration was a still a very important factor. Using data from the <a href="https://www.wipo.int/publications/en/details.jsp?id=3952&plang=EN" target ="blank">World Intellectual Property Organization WIPO</a>, Figure 3 highlights that the stock and growth of inventor immigrants has been much higher in the USA compared to all other countries. Accordingly, there must be other factors than solely historical patterns that explain differences between continental European countries, Canada and the USA.
+
+<br> 
 
 <hr class="hr_red">
-#### **Figure 3: XXXX**
-```{r, echo=FALSE}
-knitr::include_graphics("plot3.png")
+#### **Figure 3: The USA Attracts a Large Number of Immigrant Inventors**
+<span style="font-size:0.8em">**Stocks of Immigrant Inventors Across Countries**</span>
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+#knitr::include_graphics("plot3.png")
+plot3_df <- read.csv("plot3_df.csv") %>% mutate(year = as.factor(year))
+ggplot(plot3_df, aes(x = country_name, y = immigrants, fill = year))+
+  geom_col(position = "dodge")+
+  scale_fill_viridis(discrete = TRUE, begin = 0, end = 0.9, name = "Year")+
+  labs(x = "Country", y = "Stock of Immigrants Inventors") +
+  theme(panel.background = element_blank(),
+        panel.grid.major.y = element_line(linetype = "dotted", color = "grey"),
+        legend.position = "bottom",
+        axis.text.x = element_text(angle = 45, hjust = 1),
+        axis.line = element_line(),
+        axis.title = element_text(face="bold",size=10))
 ```
-<span style="font-size:0.8em">*Sources and notes: Graph taken from <a href="https://www.aeaweb.org/articles?id=10.1257/jep.30.4.83" target ="blank">Kerr et al. (2016)</a> based on data from the <a href="https://www.wipo.int/publications/en/details.jsp?id=3952&plang=EN" target ="blank">World Intellectual Property Organization WIPO</a>*</span>
+<span style="font-size:0.8em">*Sources and notes: Own estimations of the <a href="https://www.cieb.unibas.ch" target ="blank">CIEB</a> using data from the <a href="https://www.wipo.int/publications/en/details.jsp?id=3952&plang=EN" target ="blank">World Intellectual Property Organization WIPO</a>. The processed data shown in the plot is available on <a href="https://github.com/cieb-unibas/inventor_ethnicity" target ="blank">Github</a>.*</span>
 
 <br>
 
-Hence, there must be other factors than only historical patterns that explain differences between continental European countries, Canada and the USA. Some candidate reasons that all contribute are the English language as a *lingua franca* (e.g. <a href=https://ftp.iza.org/dp1782.pdf target=”_blank”>Chiswick, 2005</a>), the access to and attractiveness of universities (e.g. <a href= https://direct.mit.edu/rest/article-abstract/95/1/109/58045/Quotas-and-Quality-The-Effect-of-H-1B-Visa target=”_blank”>Kato and Sparber, 2013</a>), tax incentives (<a href=https://www.aeaweb.org/articles?id=10.1257/aer.20150237 target=”_blank”> Akcigit, Baslandze and Stantcheva, 2016</a>), and, last but not least, immigration policies (e.g. <a href= https://www.journals.uchicago.edu/doi/full/10.1086/705637 target=”_blank”>Kerr, 2020</a>). Some of these channels, such as the language, can obviously not be influenced by policymakers. However, the access to universities for foreign students as well as immigration regulations are within their reach and could be adapted to attract more foreign talents.
+Some channels that all contribute to the differences are the English language as a *lingua franca* (e.g. <a href=https://ftp.iza.org/dp1782.pdf target=”_blank”>Chiswick, 2005</a>), the access to and attractiveness of universities (e.g. <a href= https://direct.mit.edu/rest/article-abstract/95/1/109/58045/Quotas-and-Quality-The-Effect-of-H-1B-Visa target=”_blank”>Kato and Sparber, 2013</a>), tax incentives (<a href=https://www.aeaweb.org/articles?id=10.1257/aer.20150237 target=”_blank”> Akcigit, Baslandze and Stantcheva, 2016</a>), and, last but not least, immigration policies (e.g. <a href= https://www.journals.uchicago.edu/doi/full/10.1086/705637 target=”_blank”>Kerr, 2020</a>). Some of these channels, such as the language, can obviously not be influenced by policymakers. However, the access to universities for foreign students as well as immigration regulations are within their reach and could be adapted to attract more foreign talents. 
+
+<br>
+
+The European Union’s <a href=https://en.wikipedia.org/wiki/Blue_Card_%28European_Union%29 target=”_blank”>Blue Card</a> has been an attempt with this regard. But according to a <a href=https://www.oecd-ilibrary.org/social-issues-migration-health/recruiting-immigrant-workers-europe-2016_9789264257290-en target=”_blank”>OECD report from 2016</a>, the results have been rather mixed. However, it is encouraging that the <a href=https://www.europarl.europa.eu/news/en/press-room/20210910IPR11915/new-eu-blue-card-rules-for-highly-qualified-immigrants-wishing-to-work-in-europe target=”_blank”>European Parliament</a> has recently passed a reform of the EU Blue Card in order “to facilitate the employment of highly qualified non-EU nationals and help alleviate labour shortages in key sectors”. It remains to be hoped that the adopted rules achieve this ambitious goal and contribute to strengthen European countries’ innovative frameworks.
 
 <br>
 
@@ -159,7 +205,7 @@ Hence, there must be other factors than only historical patterns that explain di
 
 <!-- FINAL REMARKS -->
 <br class='br_desktop'>
-<span style="font-size:0.8em">*This article was written using <a href = https://rmarkdown.rstudio.com/ target = “_blank”>R Markdown</a>, <a href=https://shiny.rstudio.com/ target = “_blank”>R shiny</a> and <a href=https://plotly.com/javascript/ target = “_blank”>Plotly</a>. Computations to generate the data were performed at <a href = http://scicore.unibas.ch/ target = “_blank”> sciCORE </a> scientific computing center at the University of Basel.*</span>
+<span style="font-size:0.8em">*This article was written using <a href = https://rmarkdown.rstudio.com/ target = “_blank”>R Markdown</a>, <a href=https://shiny.rstudio.com/ target = “_blank”>R shiny</a> and <a href=https://plotly.com/javascript/ target = “_blank”>Plotly.js</a>. Computations to generate the data were performed at <a href = http://scicore.unibas.ch/ target = “_blank”> sciCORE </a> scientific computing center at the University of Basel.*</span>
 
 <br>
 <br>

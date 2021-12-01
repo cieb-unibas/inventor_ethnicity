@@ -142,7 +142,7 @@ ggplot(plot2_df, aes(x = p_year, y = share, color = country_name))+
 plot2_df <- plot2_df %>%
   arrange(country_name)
 
-plot2_df %>% write.csv2(paste0(getwd(), "/report/plot2_df.csv"))
+plot2_df %>% write.table(paste0(getwd(), "/report/plot2_df.csv"), sep = ",")
 
 
 ##############################################

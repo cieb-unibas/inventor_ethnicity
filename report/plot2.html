@@ -43,11 +43,11 @@ function unpack(rows, key) {
         current_share = []; // shares information to display for the current selection
         current_country = []; // country information to display for the current selection
         text_var = [];
-        for (var i = 0 ; i < country.length ; i++){
+        for (var i = 0 ; i <  ctry_name.length ; i++){
         for(var j = 0; j < 12; j ++){
-            if ( country[i] === chosenCountry[j] && tech_group[i] === chosenvar_2[0]) {
+            if (  ctry_name[i] === chosenCountry[j] && tech_group[i] === chosenvar_2[0]) {
                 current_share.push(share[i]);
-                current_country.push(country[i]);
+                current_country.push( ctry_name[i]);
                 current_years.push(p_year[i]);
                 text_var.push('Country: ' + ctry_name[i] + '<br>' +  
                           'Year: ' + p_year[i] + '<br>' +
@@ -63,7 +63,7 @@ function unpack(rows, key) {
 
 
 // DEFAULT SELECTIONS FOR THE PLOT
-  setBubblePlot(["US", "CH", "DE"], ["Information & Communication Technology"]);
+  setBubblePlot(["United States", "Switzerland", "Germany"], ["Information & Communication Technology"]);
 
 // DEFINE THE PLOT FOR THE SELECTED TECH_GROUP AND COUNTRIES
  function setBubblePlot(chosenCountry, chosenvar_2) {
@@ -83,18 +83,18 @@ function unpack(rows, key) {
             transforms: [{type: 'groupby', 
                           groups: current_country,
                           styles: [
-                          {target: 'CH', value: {marker: {color: d3.interpolateViridis(0.7)}}},
-                          {target: 'CA', value: {marker: {color: d3.interpolateViridis(0)}}},
-                          {target: 'CN', value: {marker: {color: d3.interpolateViridis(0.1)}}},
-                          {target: 'JP', value: {marker: {color: d3.interpolateViridis(0.65)}}},
-                          {target: 'KR', value: {marker: {color: d3.interpolateViridis(0.3)}}},
-                          {target: 'US', value: {marker: {color: d3.interpolateViridis(0.2)}}},
-                          {target: 'FR', value: {marker: {color: d3.interpolateViridis(0.4)}}},      
-                          {target: 'ES', value: {marker: {color: d3.interpolateViridis(0.5)}}},
-                          {target: 'DE', value: {marker: {color: d3.interpolateViridis(0.9)}}},
-                          {target: 'GB', value: {marker: {color: d3.interpolateViridis(0.8)}}},
-                          {target: 'SE', value: {marker: {color: d3.interpolateViridis(0.6)}}},      
-                          {target: 'IT', value: {marker: {color: d3.interpolateViridis(1)}}}
+                          {target: 'Switzerland', value: {marker: {color: d3.interpolateViridis(0.7)}}},
+                          {target: 'Canada', value: {marker: {color: d3.interpolateViridis(0)}}},
+                          {target: 'China', value: {marker: {color: d3.interpolateViridis(0.1)}}},
+                          {target: 'Japan', value: {marker: {color: d3.interpolateViridis(0.65)}}},
+                          {target: 'South Korea', value: {marker: {color: d3.interpolateViridis(0.3)}}},
+                          {target: 'United States', value: {marker: {color: d3.interpolateViridis(0.2)}}},
+                          {target: 'France', value: {marker: {color: d3.interpolateViridis(0.4)}}},      
+                          {target: 'Spain', value: {marker: {color: d3.interpolateViridis(0.5)}}},
+                          {target: 'Germany', value: {marker: {color: d3.interpolateViridis(0.9)}}},
+                          {target: 'United Kingdom', value: {marker: {color: d3.interpolateViridis(0.8)}}},
+                          {target: 'Sweden', value: {marker: {color: d3.interpolateViridis(0.6)}}},      
+                          {target: 'Italy', value: {marker: {color: d3.interpolateViridis(1)}}}
                           ]
             }], 
         };
@@ -181,18 +181,18 @@ Plotly.newPlot('myDiv', data, layout, {displayModeBar: false});
     <div class="plot" id="plotdiv"></div>
     <div class="control-row">
       <select class="selectpicker" id="select_1" name="select1" multiple="multiple" data-actions-box="true">
-        <option value="AT">Austria</option>  
-        <option value="CA">Canada</option>  
-        <option value="DK">Denmark</option>
-        <option value="FR">France</option>
-        <option value="GB">Great Britain</option>
-        <option value="DE" selected>Germany</option>
-        <option value="IT">Italy</option>
-        <option value="NL">Netherlands</option>
-        <option value="ES">Spain</option>
-        <option value="SE">Sweden</option>
-        <option value="CH" selected>Switzerland</option>
-        <option value="US" selected>USA</option>
+        <option value="Austria">Austria</option>  
+        <option value="Canada">Canada</option>  
+        <option value="Denmark">Denmark</option>
+        <option value="France">France</option>
+        <option value="United Kingdom">United Kingdom</option>
+        <option value="Germany" selected>Germany</option>
+        <option value="Italy">Italy</option>
+        <option value="Netherlands">Netherlands</option>
+        <option value="Spain">Spain</option>
+        <option value="Sweden">Sweden</option>
+        <option value="Switzerland" selected>Switzerland</option>
+        <option value="United States" selected>USA</option>
         </select>
     </div>
   </div>

@@ -21,7 +21,7 @@ function roundToTwo(num) {
     return +(Math.round(num + "e+1")  + "e-1");
 }
 
-Plotly.d3.csv("https://raw.githubusercontent.com/cieb-unibas/inventor_ethnicity/main/report/plot2_df.csv", function(err, rows){
+Plotly.d3.csv("https://raw.githubusercontent.com/cieb-unibas/inventor_ethnicity/d1ba934436720d659d3427df7223528d974abcc0/report/plot2_df.csv", function(err, rows){
 function unpack(rows, key) {
         return rows.map(function(row) { return row[key]; });
     }

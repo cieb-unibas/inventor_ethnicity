@@ -3,7 +3,7 @@
 #                 the EPO to investigate the ethnicity of inventors   #
 #                 across countries and over time.                     #
 # Authors:        Matthias Niggli/CIEB University of Basel            #
-# Last Revised:   29.11.2021                                          #
+# Last Revised:   1.12.2021                                          #
 #######################################################################
 
 ##################################################
@@ -137,6 +137,13 @@ ggplot(plot2_df, aes(x = p_year, y = share, color = country_name))+
         legend.position = "bottom",
         axis.line = element_line(),
         axis.title = element_text(face="bold",size=10))
+
+#### Order the data -> sorted in plot.js plot
+plot2_df <- plot2_df %>%
+  arrange(country_name)
+
+plot2_df %>% write.csv2(paste0(getwd(), "/report/plot2_df.csv"))
+
 
 ##############################################
 ######## Figure 3: Immigrant Stocks ##########

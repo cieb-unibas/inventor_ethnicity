@@ -14,7 +14,7 @@
 
 <title>report_main.utf8</title>
 
-<script src="report_main_files/header-attrs-2.7/header-attrs.js"></script>
+<script src="report_main_files/header-attrs-2.4/header-attrs.js"></script>
 
 <style type="text/css">
   code{white-space: pre-wrap;}
@@ -23,9 +23,7 @@
   div.column{display: inline-block; vertical-align: top; width: 50%;}
   div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
   ul.task-list{list-style: none;}
-      .display.math{display: block; text-align: center; margin: 0.5rem auto;}
-  </style>
-
+      </style>
 
 
 
@@ -227,10 +225,16 @@ var layout = {
     b: 100,
     t: 20
   },
-
+		legend: {orientation: 'h',
+		         xanchor:'center',
+             yanchor:"top",
+		         x: 0.5,
+		         y: -0.2,
+		         traceorder:'normal'
+		},
    xaxis: {
     fixedrange: true,
-    range: [1984.75, 2015.15],
+    range: [1984, 2016],
     title: '<b>Year</b>',
     zeroline: false,
     showaxis: true,

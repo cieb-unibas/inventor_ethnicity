@@ -181,7 +181,6 @@ Some channels that all contribute to the differences are the English language as
 
 The European Union’s <a href=https://en.wikipedia.org/wiki/Blue_Card_%28European_Union%29 target=”_blank”>Blue Card</a> has been an attempt in this regard. But according to an <a href=https://www.oecd-ilibrary.org/social-issues-migration-health/recruiting-immigrant-workers-europe-2016_9789264257290-en target=”_blank”>OECD report from 2016</a>, the results have been rather mixed. However, it is encouraging that the <a href=https://www.europarl.europa.eu/news/en/press-room/20210910IPR11915/new-eu-blue-card-rules-for-highly-qualified-immigrants-wishing-to-work-in-europe target=”_blank”>European Parliament</a> has recently passed a reform of the EU Blue Card in order “to facilitate the employment of highly qualified, non-EU nationals and help alleviate labour shortages in key sectors”. It remains to be hoped that the rules adopted will achieve this ambitious goal and contribute to strengthening the innovative frameworks of European countries.
 
-<br>
 
 <!-- ADAPT when posted on Social Media -->
 <!-- <br> -->
@@ -197,16 +196,16 @@ The European Union’s <a href=https://en.wikipedia.org/wiki/Blue_Card_%28Europe
 <!-- </p> -->
 
 <!-- TEASER OTHER OUTPUTS -->
-<!-- <br> -->
-<!-- <div> -->
-<!-- <iframe id="slider" width=100%" height="400" scrolling="no" frameBorder="0" style="overflow: hidden" src="https://innoscape.de/general_stuff/teaser/mrna_teaser.html"> -->
-<!-- </iframe> -->
-<!-- </div> -->
+
+<div>
+<iframe id="slider" width=100%" height="400" scrolling="no" frameBorder="0" style="overflow: hidden" src="https://innoscape.de/general_stuff/teaser/ethn_teaser.html">
+</iframe>
+</div>
 
 
 <!-- FINAL REMARKS -->
 <br class='br_desktop'>
-<span style="font-size:0.8em">*This article was written using <a href = https://rmarkdown.rstudio.com/ target = “_blank”>R Markdown</a> and <a href=https://plotly.com/javascript/ target = “_blank”>Plotly.js</a>. Computations to generate the data were performed at <a href = http://scicore.unibas.ch/ target = “_blank”> sciCORE </a> scientific computing center at the University of Basel.*</span>
+<span style="font-size:0.8em">*This article was written using <a href = https://rmarkdown.rstudio.com/ target = “_blank”>R Markdown</a> and <a href=https://plotly.com/javascript/ target = “_blank”>Plotly.js</a>. Computations to generate the data were performed at <a href = http://scicore.unibas.ch/ target = “_blank”> sciCORE </a> scientific computing center at the University of Basel. We thank Monty Sufrin for excellent proof-reading.*</span>
 
 <br>
 

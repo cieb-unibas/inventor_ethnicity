@@ -50,8 +50,13 @@ library("plotly")
 <br>
 <a href='https://www.linkedin.com/in/christian-rutzer-38978392' target = “_blank”>LinkedIn</a> 
 <br>
-<a href='mailto:christian.rutzer@unibas.ch'>christian.rutzer@unibas.ch</a>">*Christian Rutzer*</a>
+<a href='mailto:christian.rutzer@unibas.ch'>christian.rutzer@unibas.ch</a>">*Christian Rutzer*</a> <p align="right">
 </p>
+
+<p style="text-align: left; line-height: 100%">
+<a href="#" data-placement="bottom" data-toggle="tooltip" data-html="true" title="The analysis is part of the <a href='https://innoscape.ch' target = “_blank”>Innoscape Project</a>. The project is conducted by the <a href='https://https://cieb.unibas.ch/en/' target = “_blank”>Center for International Economics and Business | CIEB of the University of Basel</a> aiming to investigate the Swiss innovation landscape from an economic perspective. To gain insights, we apply sound scientific methods from economics and data science. We strictly follow scientific principles and do not pursue any interests of individual organizations or groups. Find out more on <a href='https://innoscape.ch' target = “_blank”>innoscape.ch</a>">*About*</a>
+</p>
+
 
 
 <!-- TITLE PICTURE -->

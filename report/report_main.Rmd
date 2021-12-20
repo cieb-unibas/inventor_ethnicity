@@ -40,27 +40,46 @@ library("plotly")
 <!-- START with text -->
 
 ### **Mind The Gap: Non-Western Origin Inventors in the USA and Europe**
+<!-- The U.S. is attractive to non-Western inventors, but not so continental Europe -->
+
 <br>
+
 <p style="text-align: left; line-height: 100%;">
-*December 2021* by <a href="#" data-placement="bottom" data-toggle="tooltip"  data-html="true" title="<img src='https://innoscape.de/authors/mn2018.jpg'><b>Matthias Niggli</b> is a research data scientist, economist and project collaborator. He holds a PhD in economics from the University of Basel and has a background in public policy from previous positions in the public sector. Matthias has a special interest in experimenting with all kinds of machine-learning methods and is enthusiastic about discovering novel approaches to visualize data. 
+*December 2021* by <a href="#" data-placement="bottom" data-toggle="tooltip"  data-html="true" title="<img src='https://innoscape.de/authors/mn2018.jpg'><b>Matthias Niggli</b> is a project collaborator, research data scientist and economist of the <a href='https://cieb.unibas.ch/en/' target = “_blank”>Center for International Economics and Business | CIEB of the University of Basel</a>. He holds a PhD in economics from the University of Basel and has a background in public policy from previous positions in the public sector. Matthias has a special interest in experimenting with all kinds of machine-learning methods and is enthusiastic about discovering novel approaches to visualize data. 
 <br> 
 <a href='https://www.linkedin.com/in/matthias-niggli-b47b33119' target = “_blank”>LinkedIn</a> 
 <br>
-<a href='mailto:matthias.niggli@unibas.ch'>matthias.niggli@unibas.ch</a>">*Matthias Niggli*</a> *and* <a href="#" data-placement="bottom" data-toggle="tooltip" data-html="true" title="<img src='https://innoscape.de/authors/Christian Rutzer_small.jpg'> <b>Christian Rutzer</b> is the chief scientist and operational manager of the project. He holds a PhD in economics from the University of Basel in international trade and innovation. Christian likes to apply new methods from data science to analyze economic questions.
+<a href='mailto:matthias.niggli@unibas.ch'>matthias.niggli@unibas.ch</a>">*Matthias Niggli*</a> *and* <a href="#" data-placement="bottom" data-toggle="tooltip" data-html="true" title="<img src='https://innoscape.de/authors/Christian Rutzer_small.jpg'> <b>Christian Rutzer</b> is the operational manager of the project and chief scientist of the <a href='https://cieb.unibas.ch/en/' target = “_blank”>Center for International Economics and Business | CIEB of the University of Basel</a>. He holds a PhD in economics from the University of Basel in international trade and innovation. Christian likes to apply new methods from data science to analyze economic questions.
 <br>
 <a href='https://www.linkedin.com/in/christian-rutzer-38978392' target = “_blank”>LinkedIn</a> 
 <br>
 <a href='mailto:christian.rutzer@unibas.ch'>christian.rutzer@unibas.ch</a>">*Christian Rutzer*</a> <p align="right">
 </p>
 
+<details> 
+<summary>*About*</summary> 
+
+The analysis is part of <a href='https://innoscape.ch' target = “_blank”>Innoscape</a>. The project is conducted by the <a href='https://cieb.unibas.ch/en/' target = “_blank”>Center for International Economics and Business | CIEB of the University of Basel</a> aiming to investigate the Swiss innovation landscape from an economic perspective. 
+
+<!-- To gain insights, we apply sound scientific methods from economics and data science. We strictly follow scientific principles and do not pursue any interests of individual organizations or groups. -->
+
+<p style="text-align: left;">
+Follow us on social media &nbsp;&nbsp;
+    <a href="https://www.linkedin.com/company/cieb-unibas" class="fa fa-linkedin" style='color:black;text-decoration: none;' target='_blank'></a>
+    &nbsp;&nbsp;
+    <a href="https://twitter.com/cieb_unibas/" class="fa fa-twitter" style='color:black;text-decoration: none;' target='_blank'></a>
+    &nbsp;&nbsp;
+    <a href="https://github.com/cieb-unibas/" class="fa fa-github" style='color:black;text-decoration: none;' target='_blank'></a>
+</p>
+</details> 
+
+<!-- ABOUT as Tootltip
 <p style="text-align: left; line-height: 100%">
 <a href="#" data-placement="bottom" data-toggle="tooltip" data-html="true" title="The analysis is part of the <a href='https://innoscape.ch' target = “_blank”>Innoscape Project</a>. The project is conducted by the <a href='https://https://cieb.unibas.ch/en/' target = “_blank”>Center for International Economics and Business | CIEB of the University of Basel</a> aiming to investigate the Swiss innovation landscape from an economic perspective. To gain insights, we apply sound scientific methods from economics and data science. We strictly follow scientific principles and do not pursue any interests of individual organizations or groups. Find out more on <a href='https://innoscape.ch' target = “_blank”>innoscape.ch</a>">*About*</a>
-</p>
-
-
+</p> -->
 
 <!-- TITLE PICTURE -->
-![](title_picture.jpg){width=100%}
+![](title_picture_small.jpg){width=100%}
 <a href="https://unsplash.com/photos/MiVrRlSe4BI" target="_blank">Ellis Island, United States in 1910 | The New York Public Library</a>
 
 
@@ -137,7 +156,7 @@ Another interesting finding is that non-western ethnic inventors in the USA can 
 library("htmltools")
 htmltools::includeHTML("plot2.html")
 ```
-<span style="font-size:0.8em">*Sources and notes: The plot shows the combined prevalence of Non-Western ethnic origins for different technologies. Own estimations of the <a href="https://www.cieb.unibas.ch" target ="blank">CIEB</a> using the names of inventors as stated on EPO and USPTO patents. The raw data is obtained from the <a href="https://www.uspto.gov/" target ="blank">USPTO</a> and the <a href=https://stats.oecd.org/index.aspx?queryid=79486# target = “_blank”>OECD</a>. The processed data shown in the plot is available on <a href="https://github.com/cieb-unibas/inventor_ethnicity" target ="blank">Github</a>.*</span>
+<span style="font-size:0.8em">*Sources and notes: The plot shows the combined prevalence of Non-Western ethnic origins for different technologies. Only observations with at least 30 inventors per year are shown. Own estimations of the <a href="https://www.cieb.unibas.ch" target ="blank">CIEB</a> using the names of inventors as stated on EPO and USPTO patents. The raw data is obtained from the <a href="https://www.uspto.gov/" target ="blank">USPTO</a> and the <a href=https://stats.oecd.org/index.aspx?queryid=79486# target = “_blank”>OECD</a>. The processed data shown in the plot is available on <a href="https://github.com/cieb-unibas/inventor_ethnicity" target ="blank">Github</a>.*</span>
 
 <br>
 
@@ -201,6 +220,8 @@ The European Union’s <a href=https://en.wikipedia.org/wiki/Blue_Card_%28Europe
 <!-- </p> -->
 
 <!-- TEASER OTHER OUTPUTS -->
+
+<br_mobile>
 
 <br_mobile>
 

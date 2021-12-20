@@ -1,5 +1,5 @@
-# inventor_ethnicity
-This repository contains code for an interactive report about migration patterns and the ethnic distribution of inventors in the USA and Western European countries. The full article can be accessed <a href = https://innoscape.de/female_share/en/female_inventors.html target = "_blank">*here*</a>.
+# Mind The Gap: Non-Western Origin Inventors in the USA and Europe
+This repository contains code for an interactive report about migration patterns and the ethnic distribution of inventors in the USA and Western European countries. The full article can be accessed <a href = https://innoscape.ch/en/publications/immigration-of-inventors target = "_blank">*here*</a>.
 
 The number of inventors with non-western ethnic backgrounds has increased tremendously in the USA and contributes significantly to its inventive capacity. This is different in continental European countries, which have been lagging behind in the global race for talents. Furthermore, the vast increase of non-western inventors in the USA has been strongly directed towards emerging high-technology fields. This pattern cannot be observed for European countries. We argue that the USA's extraordinary attractiveness for inventors from all around the world could be an important asset that is lacking in European countries and this should be a concern for European policymakers.
 

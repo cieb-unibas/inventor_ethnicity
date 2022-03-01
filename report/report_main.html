@@ -12,9 +12,9 @@
 
 
 
-<title>report_main.utf8</title>
+<title>report_main.knit</title>
 
-<script src="report_main_files/header-attrs-2.4/header-attrs.js"></script>
+<script src="report_main_files/header-attrs-2.11/header-attrs.js"></script>
 
 <style type="text/css">
   code{white-space: pre-wrap;}
@@ -23,7 +23,9 @@
   div.column{display: inline-block; vertical-align: top; width: 50%;}
   div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
   ul.task-list{list-style: none;}
-      </style>
+      .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+
 
 
 
@@ -57,7 +59,7 @@
 <meta property='og:title' content='Innoscape.ch | Mind The Gap: Non-Western Origin Inventors in the USA and Europe'/>
 <meta property='og:image' content='https://innoscape.de/inventor_ethnicity/title_picture.jpg'/>
 <meta property='og:description' content='The number of inventors with non-western ethnic backgrounds has increased tremendously in the USA and contributes significantly to its inventive capacity. This is different in continental European countries, which have been lagging behind in the global race for talents.'/>
-<meta property='og:url' content='https://innoscape.ch/en/publications/XXXXX'/>
+<meta property='og:url' content='https://innoscape.ch/en/publications/immigration-of-inventors'>
 </head>
 <!-- START with text -->
 <div id="mind-the-gap-non-western-origin-inventors-in-the-usa-and-europe" class="section level3">
@@ -77,7 +79,9 @@
 <p align="right">
 </p>
 <details>
-<p><summary><em>About</em></summary></p>
+<summary>
+<em>About</em>
+</summary>
 <p>The analysis is part of <a href='https://innoscape.ch' target = “_blank”>Innoscape</a>. The project is conducted by the <a href='https://cieb.unibas.ch/en/' target = “_blank”>Center for International Economics and Business | CIEB of the University of Basel</a> aiming to investigate the Swiss innovation landscape from an economic perspective.</p>
 <!-- To gain insights, we apply sound scientific methods from economics and data science. We strictly follow scientific principles and do not pursue any interests of individual organizations or groups. -->
 <p style="text-align: left;">
@@ -126,7 +130,7 @@ Follow us on social media    <a href="https://www.linkedin.com/company/cieb-un
 <div id="figure-2-the-usa-has-the-highest-non-western-prevalence-in-emerging-high-technology-fields" class="section level4">
 <h4><strong>Figure 2: The USA Has the Highest Non-Western Prevalence in Emerging High-Technology Fields</strong></h4>
 <!-- <span style="font-size:0.8em">**Combined Prevalence of Non-Western Ethnic Origins Across Technologies**</span> -->
-<p><head>
+<head>
   <meta charset="utf-8">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/css/bootstrap-select.min.css">
@@ -241,13 +245,13 @@ var layout = {
     b: 100,
     t: 20
   },
-		legend: {orientation: 'h',
-		         xanchor:'center',
+        legend: {orientation: 'h',
+                 xanchor:'center',
              yanchor:"top",
-		         x: 0.5,
-		         y: -0.2,
-		         traceorder:'normal'
-		},
+                 x: 0.5,
+                 y: -0.2,
+                 traceorder:'normal'
+        },
    xaxis: {
     fixedrange: true,
     range: [1984, 2016],
@@ -358,7 +362,8 @@ Plotly.newPlot('myDiv', data, layout, {displayModeBar: false});
 <div id='myDiv'></div>
 
 </body>
-     <span style="font-size:0.8em"><em>Sources and notes: The plot shows the combined prevalence of Non-Western ethnic origins for different technologies. Only observations with at least 30 inventors per year are shown. Own estimations of the <a href="https://www.cieb.unibas.ch" target ="blank">CIEB</a> using the names of inventors as stated on EPO and USPTO patents. The raw data is obtained from the <a href="https://www.uspto.gov/" target ="blank">USPTO</a> and the <a href=https://stats.oecd.org/index.aspx?queryid=79486# target = “_blank”>OECD</a>. The processed data shown in the plot is available on <a href="https://github.com/cieb-unibas/inventor_ethnicity" target ="blank">Github</a>.</em></span></p>
+    
+<p><span style="font-size:0.8em"><em>Sources and notes: The plot shows the combined prevalence of Non-Western ethnic origins for different technologies. Only observations with at least 30 inventors per year are shown. Own estimations of the <a href="https://www.cieb.unibas.ch" target ="blank">CIEB</a> using the names of inventors as stated on EPO and USPTO patents. The raw data is obtained from the <a href="https://www.uspto.gov/" target ="blank">USPTO</a> and the <a href=https://stats.oecd.org/index.aspx?queryid=79486# target = “_blank”>OECD</a>. The processed data shown in the plot is available on <a href="https://github.com/cieb-unibas/inventor_ethnicity" target ="blank">Github</a>.</em></span></p>
 <p><br></p>
 <!-- HIGHLIGHT -->
 <div class="bloc_div">
@@ -422,10 +427,8 @@ $(document).ready(function(){
 
 <p style="text-align: center;">
   <h_footer><a href="https://cieb.unibas.ch" target='_blank' style='color:black;text-decoration: none;'>CIEB | University of Basel </a> </h_footer>
-</p>
 
-<p style="text-align: center;">
-  <h_footer>Follow us on Social Media </h_footer> &nbsp;&nbsp;
+  <h_footer>| Follow us on Social Media </h_footer> &nbsp;&nbsp;
     <br class='br_mobile'>
 
     <a href="https://twitter.com/cieb_unibas/" class="fa fa-twitter" style='color:black;text-decoration: none;' target='_blank'></a>

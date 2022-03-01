@@ -25,7 +25,7 @@ output:
 <meta property='og:title' content='Innoscape.ch | Mind The Gap: Non-Western Origin Inventors in the USA and Europe'/>
 <meta property='og:image' content='https://innoscape.de/inventor_ethnicity/title_picture.jpg'/>
 <meta property='og:description' content='The number of inventors with non-western ethnic backgrounds has increased tremendously in the USA and contributes significantly to its inventive capacity. This is different in continental European countries, which have been lagging behind in the global race for talents.'/>
-<meta property='og:url' content='https://innoscape.ch/en/publications/XXXXX'/>
+<meta property='og:url' content='https://innoscape.ch/en/publications/immigration-of-inventors'>
 </head>
 
 
